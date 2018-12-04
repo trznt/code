@@ -17,3 +17,8 @@ dbconn.openDB(0,function (error, res) {
     console.log("Server is listening at http://%s:%s", server.address().address, server.address().port);
   }
 });
+
+app.get('/',function(req,res){
+  res.sendFile(__dirname + '/html/index.html')
+  console.log('accessed Index');
+});
