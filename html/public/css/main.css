@@ -1,0 +1,45 @@
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.my-nav-search {
+  border-color:  #ffffff;
+  color: #ffffff;
+}
+
+.my-nav-search:hover {
+  color:  #ffffff;
+  border-color:  #ffffff;
+  background-color: #e0732f;
+}
+
+.navbar {
+  background-color: #1c5c8a;
+}
+
+
+.my-dropdown-menu {
+  min-width: 18rem;
+}
+
+
+.front_page {
+  background-image: url('/images/back_computer.jpeg');
+  color: #ffffff;
+}
+
+
+.front_page_desc {
+  font-size: 20px;
+}
+
+.my-jumbotron-btn {
+  background-color: transparent;
+  border-color:  #1c5c8a;
+}
+
+.my-jumbotron-btn:hover {
+  background-color: #1c5c8a;
+}

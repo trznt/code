@@ -25,11 +25,16 @@ dbconn.openDB(0,function (error, res) {
 });
 
 app2.get('/',function(req,res){
-  res.sendFile(__dirname + '/html/index.html')
+  res.sendFile(__dirname + '/html/enu/index.html')
   console.log('accessed Index');
 });
 
 app.get('/',function(req,res){
-  res.sendFile(__dirname + '/html/index.html')
+  res.sendFile(__dirname + '/html/enu/index.html')
+  console.log('accessed Index');
+});
+
+app.get('/embolden',function(req,res){
+  res.sendFile(__dirname + '/html/enu/embolden.html')
   console.log('accessed Index');
 });
