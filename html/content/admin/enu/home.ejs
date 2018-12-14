@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/admin/enu/head.ejs %>
+  <title>Algorithms Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/admin/enu/main-header.ejs %>
+</header>
+
+<body>
+  <div class="container">
+    <br /><br /><br />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h2>Add a new page</h2>
+        <p class="front_page_desc">
+            Click the button to add a new page to the index.
+        </p>
+        <button class="btn btn-info" onclick="window.location.replace('/add_page');">Add New Page</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div><br /><br /><br />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h2>Edit a page index information</h2>
+        <p class="front_page_desc">
+            Select the page from the list below and click to edit.
+        </p>
+        <button class="btn btn-info" onclick="window.location.replace('/edit_page');">Edit Page</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+
+
+</body>
+  <% include ../../../partials/admin/enu/tail.ejs %>
+  <% include ../../../partials/admin/enu/main-footer.ejs %>

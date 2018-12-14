@@ -1,0 +1,109 @@
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.my-nav-search {
+  border-color:  #ffffff;
+  color: #ffffff;
+}
+
+.my-nav-search:hover {
+  color:  #ffffff;
+  border-color:  #ffffff;
+  background-color: #e0732f;
+}
+
+.navbar {
+  background-color: #de6231;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+.sidebar {
+  border-right: 1px solid rgba(0,0,0,.1);
+  font-size: 22px;
+  color: #de6231;
+}
+
+.sidebar a{
+    color: #de6231;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.sub-heading {
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+.my-dropdown-menu {
+  min-width: 18rem;
+}
+
+
+.front_page {
+  background-image: url('/images/algo1.jpeg');
+  color: #ffffff;
+  border-radius: 0rem;
+}
+
+
+.front_page_desc {
+  font-size: 20px;
+}
+
+.my-jumbotron-btn {
+  background-color: transparent;
+  border-color:  #1c5c8a;
+}
+
+.my-jumbotron-btn:hover {
+  background-color: #1c5c8a;
+}
+
+.list {
+  padding-top:10px;
+  list-style-type:none;
+  font-size:20px;
+}
+
+.list li{
+  padding-top:6px;
+}
+
+.display_blocks {
+  list-style-type: none;
+  text-align: center;
+}
+
+.comparer {
+  display: inline-block;
+  float: left;
+  border-style: dotted;
+  border: 10px;
+  background-color: #777777;
+}
+
+.comparer-swap {
+  display: inline-block;
+  float: left;
+  border-style: dotted;
+  border: 10px;
+  background-color: #ffdb0b;
+}
+
+
+.display_blocks li {
+  float: left;
+  padding: 20px;
+  width: 80px;
+  margin: 10px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #31c7de;
+}

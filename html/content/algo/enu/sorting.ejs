@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/algo/enu/head.ejs %>
+  <title>Sorting Algorithms</title>
+</head>
+
+<header>
+  <% include ../../../partials/algo/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Algorithms</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/algo/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>What is sorting?<br /><br />
+        <p class="front_page_desc"><br />In real life most things are storted. For example, the books in a store might be arranged alphabetically so that you are able to check quickly if the title that you are looking for is avaialble. Sports scores, is another example. If you have a set of scores from various teams competing in the championship - you generally tend to list them starting with the highest scorer to the lowest.</p><br />
+        <p class="front_page_desc">
+          In fact, everywhere you look, things are sorted in either in an ascending or a descending order. So for computers, sorting is something it needs to do quite frequently and an important part of any task that we program it to do. There are many ways to write a sorting algorithm. Let's take a real world example and understand more about how thats possible.
+        </p>
+        <br />
+        <h2>Sorting Socks</h2>
+        <p class="front_page_desc">
+          The washing machine has just completed washing all your socks. Theres 10 different pairs of socks, each with a different color and now you need to sort and fold them and put them away. So how do you go about doing this? And you want to come up with the fastest way possible so that you can get back to watching that TV show.
+        </p><br />
+        <p class="front_page_desc">
+          Let's say you have the pile in front of you. You pick up the first sock and keep it aside. Now you go through the remaining socks in the pile looking for that one sock that matches what you have kept aside. Once you find a match, you pair it with sock that you have a keep it away. Now you pick a new color, kepe it aside and then start going through the pile to find the matching pair and so on, until all socks are matched.
+        </p><br />
+        <p class="front_page_desc">
+          For 10 pairs of socks, you have now gone through your entire pile about 10 times. The pile does however, get smaller as you put away more and more pairs. So the time it takes for you to find a matching pair to the 8th color sock is much less than the time you are taking to sort the 2nd pair. Because by the time you are matching the 8th pair there's only 5 socks left to go through to find a match. But when you were sorting your 2nd pair, there were still 17 socks left in the pile.
+        </p><br />
+        <h2>A better way</h2>
+        <p class="front_page_desc">
+          What if instead of going through the complete pile each time you look for a paritcular color of socks, you just place each sock aside and then as and when you come across a matching pair you pair it up immediately with the first sock of your pair.
+        </p><br />
+        <p class="front_page_desc">
+        We start by taking 10 post-it notes and writing down the color of each sock and placing them on a table. The plan is to place each sock of a color into its set which is marked by the post-it with its color written on it. Now when we come across a red sock, we place it on the post-it saying 'red'. Now we continue to go through the pile matching each color against the post-it and as we find the second sock, we just added it to the sock thats already in its designated place on the table.
+          </p><br />
+        <p class="front_page_desc">
+          Well guess what, now as you go through the pile you keep pairing socks. By the time you reach the last sock in the pile, you are all 'sorted' (pun intended). Instead of going through the complete pile for each color, you just had to go through the pile once pairing up socks and putting them into each color set.
+        </p><br />
+        <p class="front_page_desc">
+        </p><br />
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/algo/enu/tail.ejs %>
+  <% include ../../../partials/algo/enu/main-footer.ejs %>

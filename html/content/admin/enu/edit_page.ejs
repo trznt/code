@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/admin/enu/head.ejs %>
+  <title>Algorithms Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/admin/enu/main-header.ejs %>
+</header>
+
+<body>
+  <div class="container">
+    <br />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h2>Edit a page</h2>
+        <p class="front_page_desc">
+            Click a page to edit:
+        </p>
+        <br />
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Page</th>
+              <th scope="col">Route</th>
+              <th scope="col">Tags</th>
+            </tr>
+          </thead>
+          <tbody class="list_index">
+            <tr>
+              <td style="width:25%"></td>
+              <td style="width:50%">
+                <div class="loader"></div>
+              </td>
+              <td style="width:25%"></td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+      </div>
+      <div class="col-md-1"></div>
+    </div><br />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <button class="btn btn-warning float-right" onclick="window.location.replace('/home');">Cancel</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <br /><br />
+  </div>
+
+
+</body>
+  <% include ../../../partials/admin/enu/tail.ejs %>
+  <script>
+    $(document).ready(function(){
+      $.get('/api/getIndex').done(function(result){
+        var response = "";
+        for(var i = 0;i < result.length;i++){
+          response += "<tr><td>" + (i + 1) + "</td><td><a href=\"javascript:editDetail('" + result[i].route + "');\">" + result[i].page + "</a></td><td>" + result[i].route + "</td><td>" + result[i].tags + "</td></tr>";
+        }
+        $('.list_index').html(response);
+      });
+    });
+  </script>
+  <% include ../../../partials/admin/enu/main-footer.ejs %>

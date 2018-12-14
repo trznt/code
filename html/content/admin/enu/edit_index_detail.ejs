@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/admin/enu/head.ejs %>
+  <title>Algorithms Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/admin/enu/main-header.ejs %>
+</header>
+
+<body>
+  <div class="container">
+    <br />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h2>Edit Page Detail</h2>
+        <p class="front_page_desc">
+            Click save to edit the changes:
+        </p>
+        <br />
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+             <span class="input-group-text" id="basic-addon3">Page Name</span>
+          </div>
+          <input type="text" class="form-control" id="name" arua-describeby="basic-addon3" value="<%= page %>"/>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+             <span class="input-group-text" id="basic-addon3">Route</span>
+          </div>
+          <input type="text" class="form-control" id="route" arua-describeby="basic-addon3" value="<%= route %>" disabled/>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+             <span class="input-group-text" id="basic-addon3">Tags</span>
+          </div>
+          <input type="text" class="form-control" id="tags" arua-describeby="basic-addon3" value="<%= tags %>"/>
+        </div>
+        <br />
+      </div>
+      <div class="col-md-1"></div>
+    </div><br />
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <button class="btn btn-info" onclick="add_page()"> Save </button>
+        <button class="btn btn-warning float-right" onclick="window.location.replace('/home');">Cancel</button>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <br /><br />
+  </div>
+
+
+</body>
+  <% include ../../../partials/admin/enu/tail.ejs %>
+  <% include ../../../partials/admin/enu/main-footer.ejs %>
