@@ -16,7 +16,7 @@
 }
 
 .navbar {
-  background-color: #de6231;
+  background-color: #24a601;
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,.1);
 }
 
@@ -27,7 +27,7 @@
 }
 
 .sidebar a{
-    color: #de6231;
+    color: #24a601;
 }
 
 .heading {
@@ -45,10 +45,9 @@
 
 
 .front_page {
-  background-image: url('/images/algo2.jpeg');
+  background-image: url('/images/algo1.jpeg');
   color: #ffffff;
   border-radius: 0rem;
-  text-shadow: 1px 1px #000000;
 }
 
 

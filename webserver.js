@@ -25,6 +25,11 @@ module.exports = {
         console.log('rendering Algo-Index');
       });
 
+      app.get('/code',function(req,res){
+        res.render(__dirname + '/html/content/code/enu/index.ejs')
+        console.log('rendering Code-Index');
+      });
+
       app.get('/algo/sorting',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/sorting.ejs')
         console.log('rendering Algo-Index');
