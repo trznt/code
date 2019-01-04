@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/db/enu/head.ejs %>
+  <title>Database Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/db/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Database</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/db/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Introduction</h2><br />
+        <p class="front_page_desc"><br />Everyday millions of terabytes of information is being generated all over the world. Take a look at the sentence once again, millions of terabytes. A terabyte in itself a million million bytes. So we are talking about the order of a <b><u>million</u></b> <b><u>million</u></b> <b><u>million</u></b> bytes!</p>
+
+        <p class="front_page_desc center-text">
+          1,000,000   x   1,000,000  x  1,000,000
+        </p>
+
+        <p class="front_page_desc"> When there's so much of data, how does one organize this data so that we may look it up once again to see what happened, and what's going on currently - where's my pizza? did the flight from JFK to LAX Land at the right time ? What's the leader board for PUBG looking like ? How many subscribers does PewDiePie have? . Maybe we can build a catalog of computer devices from all over the world that's generating the data and tag the information against that name.</p>
+        <p class="front_page_desc"> Imagine you have a large chest of drawers and we have one draw for each computing device that generates data. So if I wanted to find out that status of that flight, I open each drawer one by one to check if that was the computer device that generated the latest flight stats. It could take thousands, maybe millions of years, before I get find the information I was looking for.</p><br />
+
+        <p class="front_page_desc"> So perhaps the chest of drawers for all computing devises isn't the best approach. What if I had one chest or drawers for all the airlines, one for youtube, once for pizza stores. If I wanted to find the status of a specific flight, I still will have to go through being made by the airline before I find the one I am looking for, and flights are taking off every moment, so I will have to be really lucky to find the one I am looking for. In the case of youtube, each drawer could have a video, or and ad, or subscription information or maybe comments. There's so much of different kinds of data, I still don't know if I will ever find what I am looking for. And for Pizza, I would need to look at all the pizzas out for delivery before I find the one I am looking for.</p><br />
+
+                <p class="front_page_desc"> Maybe I organize differently, once again, one chest of drawers for all the flights landing in LAX, one for all the pizza deliveries in my city and one for all only youtube subscriptions. Now I can probably figure out youtube subscriptions for PewDiePie, by looking up the letter P. That should be a while lot easier. And for the flight information, I can probably spend maybe afew minutes to see the flight status and the same with Pizza.</p><br />
+
+
+                <p class="front_page_desc"> As you can see, when we change the way the data is organized, it becomes a whole lot more easier for us to find the information that we are looking for. Databases are computer systems that let you organize data, the way you want to, so that information can be quickly retreived.</p><br />
+
+
+                <p class="front_page_desc">There are several types of databases. Some of the more popular ones of today are:</p><br />
+                <ul class="front_page_desc list">
+                  <li>
+                    Relational Databases
+                  </li>
+                  <li>
+                    Document Databases
+                  </li>
+                  <li>
+                    GRAPH Databases
+                  </li>
+                </ul><br />
+
+                <p class="front_page_desc">Each one provides a different way to organize information. The data entities in question and their relationships with one another is what matters when choosing the right time. Let's look at this in detail. </p><br />
+
+
+
+          <h4 id="RDBMS">Relational Databases</h4><br />
+          <p class="front_page_desc">
+            These databases are the best choice when there is a lot of relationships between information. For eg. Math class can have 10 students. But not all 10 together may be part of science class. So what we can do is have multiple class rooms spcified and draw lines from each student to each class. One student can be part many classes and one class have many students.
+          </p>
+
+          <h4 id="DOC">Document Databases</h4><br />
+          <p class="front_page_desc">
+            These databases are the best choice when there isn't a lot of relationships between the data being represented. Objects type data can be stored in a document database. For example we can have a database of different types of cars - we know that each car has 1 engine, 4 wheels and mutliple gears. In this case 1 engine may not be always be present in a different car. The replationship among the data points are mostly unique. The car is the make and model will be the main data point of the database and the inherent features will be it's parameters.
+          </p>
+
+          <h4 id="GRAPH">Graph Databases</h4><br />
+          <p class="front_page_desc">
+            Graph databases are basically a set of nodes which are connecte to other nodes via a relationship. For example a social networking platform where friends lists are maintained will work as a graph. Each person can be friends with numerous other people and they in turn friends with numerous other people. Such type of relationships are best suited to be represented in graph format - kind of like a network.
+          </p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/db/enu/tail.ejs %>
+  <% include ../../../partials/db/enu/main-footer.ejs %>

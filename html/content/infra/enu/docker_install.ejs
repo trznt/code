@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/infra/enu/head.ejs %>
+  <title>Coding Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/infra/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Infrastructure</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/infra/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Docker Installation</h2><br /><br />
+        <p class="front_page_desc"><br />Let's install docker on a linux server. Docker gives us a way to effectively maximize the use of the underlying physical server by spawning multiple containers on it. We can even run multiple servers in containers on it.</p>
+
+        <p class="front_page_desc"><b>Step 1:</b> Log into the linux server and type the command. Here we are installing Docker on an ubuntu server:</p>
+          <p class="code-snippet">
+            uname -a
+          </p><br />
+          <img class="center" src="/images/docker_install/docker_install_ubuntu_uname.png" /><br /><br />
+
+          <p class="front_page_desc"><b>Step 2:</b> Uninstall any old versions of docker. It's okay if apt-get is unable to find any old versions:</p>
+            <p class="code-snippet">
+              sudo apt-get remove docker docker-engine docker.io
+            </p><br />
+            <img class="center" src="/images/docker_install/docker_install_check_for_old_versions.png" /><br /><br />
+
+          <p class="front_page_desc"><b>Step 3:</b> Update the apt package index:</p>
+            <p class="code-snippet">
+              sudo apt-get update
+            </p><br />
+            <img class="center" src="/images/docker_install/docker_install_apt_get_update_1.png" /><br />
+            <img class="center" src="/images/docker_install/docker_install_sudo_apt_get_2.png" /><br /><br />
+
+          <p class="front_page_desc"><b>Step 4:</b> Install packages to allow apt to make use of HTTPS for repositories:</p>
+            <p class="code-snippet">
+              sudo apt-get install \ <br />
+                apt-transport-https \ <br />
+                ca-certificates \ <br />
+                curl \ <br />
+                software-properties-common
+            </p><br />
+            <img class="center" src="/images/docker_install/docker_install_packages_for_https.png" /><br /><br />
+
+            <p class="front_page_desc"><b>Step 5:</b> Add Docker's official GPG key to apt.</p>
+              <p class="code-snippet">
+                curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+              </p>
+              <p class="code-snippet">
+                sudo apt-key fingerprint 0EBFCD88
+              </p><br />
+              <img class="center" src="/images/docker_install/docker_install_add_gpg_key_and_verify.png" /><br /><br />
+
+            <p class="front_page_desc"><b>Step 6:</b> Use the following command to set up the stable repository. Our ubuntu server is on x86-64, so we use:</p>
+              <p class="code-snippet">
+                sudo add-apt-repository \ <br />
+               "deb [arch=amd64] https://download.docker.com/linux/ubuntu \ <br />
+               $(lsb_release -cs) \ <br />
+               stable" <br />
+              </p><br />
+              <img class="center" src="/images/docker_install/docker_install_set_stable_repository.png" /><br /><br />
+
+            <p class="front_page_desc"><b>Step 7:</b> Perform apt-get update:</p>
+              <p class="code-snippet">
+                    sudo apt-get update
+              </p><br />
+              <img class="center" src="/images/docker_install/docker_install_second_apt_get_update.png" /><br /><br />
+
+            <p class="front_page_desc"><b>Step 8:</b> Install docker CE:</p>
+              <p class="code-snippet">
+                    sudo apt-get install docker-ce
+              </p><br />
+              <img class="center" src="/images/docker_install/docker_install_apt_get_install_1.png" /><br />
+              <img class="center" src="/images/docker_install/docker_install_apt_get_install_2.png" /><br /><br />
+
+            <p class="front_page_desc"><b>Step 9:</b> Verify the docker installation. You will see an output stating the installation is successful:</p>
+              <p class="code-snippet">
+                    sudo docker run hello-world
+              </p><br />
+              <img class="center" src="/images/docker_install/docker_install_final_validation.png" /><br /><br />
+
+              <h3>Post Installation Steps</h3>
+              <p class="front_page_desc">
+                Docker is now installed. The docker group is created but as no users are added to it. So you will need to use sudo to run docker commands. To remove the dependency on sudo, we can provide access to non-privileged users.
+              </p><br />
+              <p class="code-snippet">
+                      sudo usermod -aG docker $USER
+                </p><br />
+                <img class="center" src="/images/docker_install/docker_post_install_remove_sudo.png" /><br /><br />
+              <p class="front_page_desc">
+                You can now execute docker without the use of 'sudo'.
+              </p>
+              <p class="code-snippet">
+                      docker run hello-world
+              </p><br />
+              <img class="center" src="/images/docker_install/docker_post_install_remove_sudo_validation.png" /><br /><br />
+              <p class="front_page_desc">
+                You have now installed docker community edition successfully on your ubuntu server.
+              </p>
+
+        </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/infra/enu/tail.ejs %>
+  <% include ../../../partials/infra/enu/main-footer.ejs %>

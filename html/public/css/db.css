@@ -1,0 +1,86 @@
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.my-nav-search {
+  border-color:  #ffffff;
+  color: #ffffff;
+}
+
+.my-nav-search:hover {
+  color:  #ffffff;
+  border-color:  #ffffff;
+  background-color: #70151e;
+}
+
+.navbar {
+  background-color: #70151e;
+}
+
+.sidebar {
+  border-right: 1px solid rgba(0,0,0,.1);
+  font-size: 22px;
+  color: #70151e;
+}
+
+.sidebar a{
+    color: #70151e;
+}
+
+.code-snippet {
+  font-weight: bold;
+  background-color: #292929;
+  color: #02ff02;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.code-snippet-c {
+  font-weight: bold;
+  background-color: #292929;
+  color: #03ffdd;
+  padding: 20px;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.sub-heading {
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+.my-dropdown-menu {
+  min-width: 18rem;
+}
+
+
+.front_page {
+  background-image: url('/images/db.jpg');
+  color: #ffffff;
+  border-radius: 0rem;
+  text-shadow: 1px 1px #000000;
+}
+
+
+.front_page_desc {
+  font-size: 20px;
+}
+
+.my-jumbotron-btn {
+  background-color: transparent;
+  border-color:  #1c5c8a;
+}
+
+.my-jumbotron-btn:hover {
+  background-color: #1c5c8a;
+}

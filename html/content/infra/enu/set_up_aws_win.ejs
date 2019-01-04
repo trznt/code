@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/infra/enu/head.ejs %>
+  <title>Coding Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/infra/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Infrastructure</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/infra/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Setting up your server on AWS</h2><br />
+          <p class="front_page_desc">
+            We are going to look at AWS as they have a cool offer going on right now, where you can use their services free for the first year. This offer is valid on certain linux and windows servers. There are some restrictions on CPU and RAM as well. But it's a great place to start setting up your server <b>use</b>.
+          </p> <br /><br />
+
+          <p class="front_page_desc"><b>Step 1:</b> Go to the following URL and sign-up:
+            <p class="code-snippet">
+              <a href="https://aws.amazon.com/console/" target="_blank">https://aws.amazon.com/console/</a>
+            </p><br />
+
+            <p class="front_page_desc"><b>Step 2:</b> On the home page, click on the button that says Sign up - the orange button at the top right corner.
+                <img class="center" src="/images/aws_setup/aws_sign_up.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 3:</b> Fill in the information, as requested to complete the sign-up process. The account activation will take a few minutes.
+                <img class="center" src="/images/aws_setup/aws_sign_up_info.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 4:</b> Once activated go to click on the Services button on the top menu and select EC2.
+                <img class="center" style="width: 50%" src="/images/aws_setup/aws_click_on_ec2.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 5:</b> In the EC2 screen, click on the Launch Instance button to start configuring your server.
+                <img class="center" src="/images/aws_setup/aws_click_launch_instance.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 6:</b> We will launch a general purpose server running Ubuntu in this example, so let's choose the General purpose option server with the free tier eligibility tag next to it and then click on "Review and Launch" at the bottom.
+                <img class="center" src="/images/aws_setup/aws_linux_choose_instance_type.png" /><br /><br />
+                <img class="center" src="/images/aws_setup/aws_linux_review_and_launch.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 7:</b> In the next screen, we will choose the server operating system as ubuntu and click on the select button next to it.
+                <img class="center" src="/images/aws_setup/aws_select_linux_ubuntu.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 8:</b> In the next screen, we can see the summary of our server order. Let's click on Launch.
+                <img class="center" src="/images/aws_setup/aws_linux_launch.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc"><b>Step 9:</b> When you click on the launch button, you will get a pop-up asking you to set up a key-pair. Choose to use a new key pair and type in a name. Click on the download button to get the key pair file. This file acts like a key and will let you access the server. <b>Keep this file in a safe location. If you lose this file you will not be able to ever log into your server ever.</b><br /><br />
+                <img class="center" style="width: 50%" src="/images/aws_setup/aws_linux_setup_key_pair.png" /><br /><br />
+            <br />
+
+            <p class="front_page_desc">You are now set. The server is created and you can see your server in the dashboard. Please wait for the status of the server to reflect a green status.<br /><br />
+                <img class="center" src="/images/aws_setup/aws_linux_running.png" /><br /><br />
+            <br /><br /><br / />
+
+            <h3>Logging into your server</h3><br />
+
+          <p class="front_page_desc">If you are logging into a server from a Linux box then all you need to do is run the following command in a terminal screen to log into the server:</p>
+          <p class="code-snippet">
+            ssh -i &lt;Path to Key Pair Pem file&gt; ubuntu@&lt;Public IP&gt;
+          </p>
+          <p class="front_page_desc">The public IP will be the IP mentioned in the AWS console dashboard that shows the running server.</p><br />
+          <p class="front_page_desc">Note - if you get an error message stating that the PEM file needs to be in read mode only, then you can use the chmod command to set it to read only mode.</p>
+          <p class="code-snippet">
+            chmod 400 &lt;Path to Key Pair Pem file&gt;
+          </p>
+
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/infra/enu/tail.ejs %>
+  <% include ../../../partials/infra/enu/main-footer.ejs %>

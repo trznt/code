@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/code/enu/head.ejs %>
+  <title>Setting Up the C Programming Language</title>
+</head>
+
+<header>
+  <% include ../../../partials/code/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">C Programming</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/code/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Setting Up C on your computer<br /><br />
+        <p class="front_page_desc"><br />Before we can start writing C programs to make the computer do amazing things, we need to install the C programming language compiler. A compiler is software that lets you convert the high level language that you write into machine code. If you are using linux or Mac OS then you should already be set. If you are on windows you will need to install a C compiler. Click on the operating system you use, to set up your C compiler.<br /><br /></p>
+        <h4 id="low">Choose your OS:</h4>
+        <ul class="list">
+          <li>
+            <a href="#windows">Windows</a>
+          </li>
+          <li id="windows">
+            <a href="#linux">Linux</a>
+          </li>
+        </ul>
+        <br/>
+
+        <h4 >Windows</h4>
+        <p class="front_page_desc">For windows you will need to install a compiler. There are many compilers out there, most of them are paid. LCC is one of the compilers which comes free, as long as it is used for <b>non-commercial use</b>. So it's right for you to use as you are now just starting to learn how to program. Click <b></b><a href="https://lcc-win32.services.net/" target="_blank">here</a></b> to go to the website. On the site scroll down to the Downloads section and click on lcc-win32.</p><br />
+        <p class="front_page_desc">Install the software on your computer. You can choose the default options that show up as you click through the installation wizard.<br /><br /> Once installed, let's verify that everythings working fine. So we will start by writing a small program which will display this message on the screen - "Hello World". It's pretty much a tradition for most programmers around the world to start off their first step into learning a brand new programming language with a program that prints "hello world" on the screen. It's a great way to validate that your compiler is set up properly. It also gives a quick introduction into some of the basic syntax usage of the language. </p><br />
+
+        <p class="front_page_desc"><b>Step 1:</b> Launch the lccwin32 software from the windows start bar. If you can't find it, try searching using the windows search option for "lcc". Click on the icon to launch the software. You should see the following:</p>
+          <img class="center" src="/images/lcc_setup/lcc_opening.PNG" /><br /><br /><br />
+        <p class="front_page_desc"><b>Step 2:</b> Click on File -> New -> Project.</p>
+          <img class="center" src="/images/lcc_setup/lcc_open_new_project.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 3:</b> Fill in the project name, the project folder and click next. Ensure that 'Console Applicaiton' is selected and click Create.</p>
+          <img class="center" src="/images/lcc_setup/lcc_create_myfirstapp.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 4:</b> A message will appear asking whether to create an application skeleton. Ensure that you click <b>NO</b>.</p>
+          <img class="center" src="/images/lcc_setup/lcc_skeleton_confirmation.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 5:</b> Type in a C program file. Use any name you want, here the name <b>first.c</b> is used.</p>
+          <img class="center" src="/images/lcc_setup/lcc_first_c.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 6:</b> You will now see <b>first.c</b> in the source file section. Click the OK button.</p>
+          <img class="center" src="/images/lcc_setup/lcc_source_file_ok.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 7:</b> Now a window will pop up asking to set a few compiler settings, we will just use the default settings. Click the NEXT button.</p>
+          <img class="center" src="/images/lcc_setup/lcc_compiler_settings_next.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 8:</b> The next section asks to confirm linker settings, we will just use the default settings and click the NEXT here as well.</p>
+          <img class="center" src="/images/lcc_setup/lcc_linker_settings_next.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 9:</b> You will now see an editor screen with the title first.c - This is where you will type out your instructions.</p>
+          <img class="center" src="/images/lcc_setup/lcc_myfirst_app_editor.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 10:</b> Type in the following content into your editor screen.</p>
+           <pre class="code-snippet-c">
+            #include &lt;stdio.h&gt;
+            void main()
+            {
+              printf("hello world");
+            }
+          </pre>
+          <img class="center" src="/images/lcc_setup/lcc_hello_world_saved.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 11:</b> Save the file by pressing CTRL+S. Now we will build the project by going to Compiler and then clicking on Rebuild All. Building is the process of taking the code and then converting it into machine readable code. It generates a file with the extension <b>.exe</b> - an executable file.</p>
+          <img class="center" src="/images/lcc_setup/lcc_myfirst_app_rebuild_all.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 12:</b> Now you will see a message stating that the build is completed. There should not be any warnings or errors. In case you made a mistake while typing the instructions, the compiler will let you know in case you made an error and will also let you know the line number where the error was seen.</p>
+          <img class="center" src="/images/lcc_setup/lcc_myfirst_app_built_success.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 13:</b> Click on Compiler and then click Execute myfirstapp.exe. This step gets the computer to read the machine code stored in the myfirstapp.exe file and will execute the machine code instructions that were compiled from the high level program that you wrote. </p>
+          <img class="center" src="/images/lcc_setup/lcc_myfirst_app_execute.PNG" /><br /><br />
+        <p class="front_page_desc"><b>Step 14:</b> You can now see the result of the program that you exectued. It states 'hello world' as the output. Congratulations you have now written your first C program.</p>
+          <img class="center" src="/images/lcc_setup/lcc_myfirst_app_execute_result.PNG" /><br id="linux"/><br /><br />
+          <h3>Linux</h3>
+        <p class="front_page_desc">If you are using a linux operating system then you probably already have the tools to start writing C program. There is a compiler called <b>gcc</b> in linux. You can open up you terminal window on linux and type gcc at the prompt. If it isn't present you can install by using the package manager. If you are on Debian based linux OS like Ubuntu you can use:</p>
+        <p class="code-snippet">
+          sudo apt install gcc
+        </p><br />
+        <p class="front_page_desc">If you are on a RedHat based linux distribution like Amazon Linux or CentOS then you can use the following command to install gcc.</p>
+        <p class="code-snippet">
+          yum install gcc
+        </p><br />
+        <p class="front_page_desc">Once installed you can use any text editor to type out the following code and save it in a file called <b>myfirstapp.c</b>:</p>
+        <pre class="code-snippet-c">
+         #include &lt;stdio.h&gt;
+         void main()
+         {
+           printf("hello world");
+         }
+       </pre>
+       <p class="front_page_desc">Now go to the directory where the file is present and then type: </p>
+       <p class="code-snippet">
+         gcc myfirstapp.c -o myfirstapp.o
+       </p>
+       <p class="front_page_desc">This will create an executable binary file called myfirstapp.o. To execute the program, you can use the following command. This will get the CPU to execute the compiled machine code. The "." and "/" is an instruction given to the terminal to ask it to execute the compiled program. </p>
+       <p class="code-snippet">
+         ./myfirstapp.o
+       </p>
+       <p class="front_page_desc">You will now be able to see the result as 'hello world'.</p>
+       <p class="code-snippet">
+         hello world
+       </p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/code/enu/tail.ejs %>
+  <% include ../../../partials/code/enu/main-footer.ejs %>

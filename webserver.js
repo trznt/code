@@ -30,6 +30,56 @@ module.exports = {
         console.log('rendering Code-Index');
       });
 
+      app.get('/infra',function(req,res){
+        res.render(__dirname + '/html/content/infra/enu/index.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/infra/set_up_aws',function(req,res){
+        res.render(__dirname + '/html/content/infra/enu/set_up_aws.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/infra/set_up_aws_win',function(req,res){
+        res.render(__dirname + '/html/content/infra/enu/set_up_aws.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/infra/virtualization',function(req,res){
+        res.render(__dirname + '/html/content/infra/enu/virtualization.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/infra/containerization',function(req,res){
+        res.render(__dirname + '/html/content/infra/enu/containerization.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/infra/containerization/docker_install',function(req,res){
+        res.render(__dirname + '/html/content/infra/enu/docker_install.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/db',function(req,res){
+        res.render(__dirname + '/html/content/db/enu/index.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/db/mysql',function(req,res){
+        res.render(__dirname + '/html/content/db/enu/mysql.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/code/c',function(req,res){
+        res.render(__dirname + '/html/content/code/enu/c_setup.ejs')
+        console.log('rendering Code-Index');
+      });
+
+      app.get('/code/c/hello_world',function(req,res){
+        res.render(__dirname + '/html/content/code/enu/c_hello_world.ejs')
+        console.log('rendering Code-Index');
+      });
+
       app.get('/algo/sorting',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/sorting.ejs')
         console.log('rendering Algo-Index');

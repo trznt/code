@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/db/enu/head.ejs %>
+  <title>Database Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/db/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Database</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/db/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>MySQL</h2><br />
+        <p class="front_page_desc"><br />MySQL is an open source relational database. It is one of the most popular databases out there for use. Many big companies such as facebook, google twitter and youtube makes use of MySQL. It was built way back in 1995. MySQL is also packaged into various other applicaitons that are used in Web and Application development. It also can run on a wide variety of hardware.</p>
+
+        <p class="front_page_desc"><br />Given that i's open source and it's ability to run on virtually any OS platform, it has become immensly popular to run websites and online applications all across the world from the smallest to the biggest companies.</p>
+
+        <p class="front_page_desc" id="installation"><br />If you are looking to build a website or an applicaiton that can scale into the tens of thousands of servers, MySQL is a good place to start. Let's install MySQL on a linux server.</p><br />
+
+        <h3 >MySQL Installation</h3>
+        <p class="front_page_desc"><b>Step 1:</b> Log into your server and update package information:</p>
+        <p class="code-snippet">
+          sudo apt-get update
+        </p>
+        <img class="center" src="/images/mysql/mysql_install_apt_get_update.png" /><br /><br /><br />
+
+        <p class="front_page_desc"><b>Step 2:</b> Run the following command to upgrade existing packages:</p>
+        <p class="code-snippet">
+          sudo apt-get upgrade
+        </p>
+          <img class="center" src="/images/mysql/mysql_install_apt_get_upgrade.png" /><br /><br /><br />
+
+        <p class="front_page_desc"><b>Step 3:</b> In case you get the below alert message you can just hit the enter key to accept the default selection.</p>
+          <img class="center" style="width: 75%" src="/images/mysql/mysql_apt_get_upgrade_configuration_query.png" /><br /><br /><br />
+
+          <p class="front_page_desc"><b>Step 4:</b> Start the installation for MySQL:</p>
+          <p class="code-snippet">
+            sudo apt-get install mysql-server
+          </p>
+            <img class="center" style="width: 80%" src="/images/mysql/mysql_start_installation.png" /><br /><br /><br />
+
+        <p class="front_page_desc"><b>Step 5:</b> After the installation the MySQL database will start automatically. Let's login. Note that we are logging in with the root user which gives us privileged access to the database:</p>
+        <p class="code-snippet">
+          sudo mysql -u root
+        </p>
+          <img class="center" style="width: 80%" src="/images/mysql/mysql_install_login.png" /><br /><br /><br />
+
+        <p class="front_page_desc"><b>Step 6:</b> A database server can hold multiple database. Let's create a database for our purpose:</p>
+        <p class="code-snippet">
+          create database mydb;
+        </p>
+          <img class="center" style="width: 80%" src="/images/mysql/mysql_create_new_database.png" /><br /><br /><br />
+
+          <p class="front_page_desc"><b>Step 7:</b> Now we will create a brand new user and give is access solely to the new database. The username is 'myuser' and it's password is 'password1':</p>
+          <p class="code-snippet">
+            create user 'myuser'@'localhost' identified by 'password1'; <br />
+            grant all on mydb.* to 'myuser'@'localhost';
+          </p>
+            <img class="center" style="width: 80%" src="/images/mysql/mysql_create_user_grant.png" /><br /><br /><br />
+
+          <p class="front_page_desc"><b>Step 8:</b> Now switch to the new database that we have created a create a new table:</p>
+          <p class="code-snippet">
+            use mydb; <br />
+            create table mytable (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, val TEXT);
+          </p>
+            <img class="center" style="width: 80%" src="/images/mysql/mysql_change_database_create_table.png" /><br /><br /><br />
+
+            <p class="front_page_desc"><b>Step 9:</b> Let's add some information to our new table. We are just entering a value called "hello":</p>
+            <p class="code-snippet">
+              INSERT into mytable (val) values ("hello"); <br />
+              select * from mytable;
+            </p>
+              <img class="center" style="width: 80%" src="/images/mysql/mysql_install_insert_and_select.png" /><br /><br /><br />
+
+          <p class="front_page_desc">We have just intalled MySQL on our server and created a simple table. You may wonder what some of the commands mean. Especially the one's we ran after logging into the database. We will look into this shortly.</p>
+
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/db/enu/tail.ejs %>
+  <% include ../../../partials/db/enu/main-footer.ejs %>

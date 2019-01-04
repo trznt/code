@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/infra/enu/head.ejs %>
+  <title>Coding Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/infra/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Infrastructure</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/infra/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Virtualization<br /><br />
+        <p class="front_page_desc"><br />In the late 90's, as information technology grew and matured, organizatons both large and small were quickly buying and setting up server infrastrcture to grow their business and to interact with their customers. Software was developed for all kinds of functions such as emails advertising campaigns, websites, billing systems, order provisioning, even back end systems like inventory and HR management. </p><p class="front_page_desc">
+
+        Each system that was built had its own server hardware. Slowly a trend started to emerge - not all servers were being utilized for their maximum capacity. For eg, a website catering to thousands of customers would be performing a lot more work than a back end system which managed leaves and vacation days for the company's employees.<br /> </p>
+
+        <p class="front_page_desc"> In some cases, the workload that servers has to process was high only during the day and at night the systems did not have much to do, and systems which were intended to work only at night processing information in prepareation for the next day, only did work in the night, and were idle during the day. </p>
+
+        <p class="front_page_desc"> As and when a new IT process was introduced or a new application was built - the company had to purchase and set up more and more servers.</p>
+
+        <p class="front_page_desc"> The amount of money spent on real-estate, electricty, and cooling increased substantially. Companies also had to hire a lot more engineers to work in the datacenters to maintain the servers. In fact many companies were operating with 3 times more server capacity that what was needed. It led to a lot of wastage of energy as well.</p>
+
+        <p class="front_page_desc"> A possible solution would be to have multiple applications running from the same server. However this would not be a great idea since, there would issues around data security, and problems arising from one applicaiton accidently impacting the other system as they compete for CPU and RAM, administrators accidently making changes to files that belonged to another system. When you are running a business thats running 24/7 - these are risks that you do not want to take. There needed to be some other way how this could be addressed. Server virtualization was the answer.</p><br />
+
+        <h3>VMWare</h3>
+        <p class="front_page_desc">VMWare is a company that was formed in the late 90's. They developed a product that would let one physical server run multiple "virtual" servers on it. What this would mean is that if you had a server with 4 CPUs and 16 GB of RAM, it was possible to set up 4 virtual servers of 1 CPU and 4 GB RAM each. Each server of the virtual servers would run it's own operating system and the processes, files, and resources of one virtual machine could operate independently of the other securely, and safely without causing any performance impacts to each other. Each server would also have it's own private storage and network parameters as well. This meant that the same server could run four different websites if it wanted to. This was the beginning of the era of the cloud.</p><br />
+
+        <h3>XEN</h3>
+        <p class="front_page_desc">XEN is an open source and free virtualization software. It was developed at the University of Cambridge. It was first developed in 2003. It is a popular virtualization tool and is used by many of the largest cloud hosting service companies including Rackspace and Amazon EC2 could run four different websites if it wanted to. This was the beginning of the era of the cloud.</p><br />
+        
+        <p class="front_page_desc">
+          Server virtualization gave birth to the <b>Cloud</b>. Virtualization let's you create virtual servers in a matter of minutes and this is how you are able to spawn up a server on-demand.
+        </p>
+        </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/infra/enu/tail.ejs %>
+  <% include ../../../partials/infra/enu/main-footer.ejs %>

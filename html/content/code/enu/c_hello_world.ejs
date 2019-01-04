@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/code/enu/head.ejs %>
+  <title>Setting Up the C Programming Language</title>
+</head>
+
+<header>
+  <% include ../../../partials/code/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">C Programming</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/code/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>A closer look at "Hello World"</h2><br /><br />
+        <pre class="code-snippet-c">
+         #include &lt;stdio.h&gt;
+         void main()
+         {
+           printf("hello world");
+         }
+       </pre>
+        <p class="front_page_desc"><br />You might be wondering what each of words and lines in the program mean. Let's take apart the program that we executed in the last example and look at it line by line.<br /><br /></p>
+        <p class="code-snippet-c">
+          #include &lt;stdio.h&gt;
+        </p><br />
+        <p class="front_page_desc">
+          This line signifies a Preprocessor Directive. These directives always begin with contains a set of standard instructions or <b>functions</b> also callied a library that is shipped along with the compiler. It's like a pre-packaged set of instructions and operations that make it easier for you to concentrate on writing the actual task at hand and helps to avoid re-writing many of the basic operations that the computer needs to perform as part of executing your program. For eg - reading data from a file or writing to a file - writing to the console or reading from a console. sdtio - basically means standard input/output.  These pre-written, built-in instructions can be used when needed, without having to write the instructions from scratch. We will look at many of these functions in detail in the coming articles.
+        </p> <br />
+        <p class="code-snippet-c">
+          void main()
+        </p><br />
+          <p class="front_page_desc"> This is the starting point from where the CPU will execute each instruction we lay out. When the compiler sees <b>main()</b>, it knows thats where to start executing tasks one by one - in order. The parantheses <b>()</b> in C programming language indicate that this is a <b>function</b>. <br /><br />A function is a way to logially group instructions that together perform a small task. For eg, we can write a function to add two numbers,  to take a picture, to send a packet of data over the network, anything. We will learn more about functions in detail at a later time.<br /><br />
+          For now, by writing <b>main()</b> we are telling the compiler that this is our main function and thats the place where the CPU should start executing the tasks one by one. Note - The first word <b>void</b> has a special meaning with respect to the function and we will also talk about this when we learn about functions in detail.</p><br /><br />
+          <p class="code-snippet-c">
+            {
+          </p>
+          <p class="front_page_desc"> As mentioned previously a function is a way to group together a set of instructions that perform a task. The grouping is placed in a pair of braces <b>{ }</b>. The symbol '{' signifies the start of the function.</p><br />
+          <p class="code-snippet-c">
+            printf("hello world");
+            <p class="front_page_desc"> This line is the first instruction of our program. <b>printf("hello world")</b> is the name of a function - we know its a function because it has <b>()</b> in the name. This is a built-in standard function that is provided along with the compiler as part of the library <b>stdio.h</b>. This function prints whatever word we type between the <b>()</b> on the screen. Do note that the quotes should be used to specify the word or sentence - or you will get an error when building the project.
+          </p><br />
+          <p class="code-snippet-c">
+          }
+          </p>
+          <p class="front_page_desc"> The symbol '}' signifies the end of the main function. The instructions that are present within the {} is called the function definition. </p><br />
+
+          <p class="front_page_desc">
+            In essence, we basically performed function <b>printf</b> from within the <b>main</b> function. But notice how the printf function has no associated {} brackets to specify any group of instructions. This is because the prtinf is a built-in function and it's instructions are already located in stdio.h. We don't need to re-write those instructions. If you are writing a brand new function, then you will have to list down each instruction for the task within the {} brackets.
+          </p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/code/enu/tail.ejs %>
+  <% include ../../../partials/code/enu/main-footer.ejs %>

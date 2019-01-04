@@ -26,144 +26,55 @@
       <% include ../../../partials/code/enu/sidenav.ejs %>
       <div class="col">
         <br />
-        <h2>What is programming?<br /><br />
-        <p class="front_page_desc"><br /> Computers don't understand plain english. At a physical level the computer understands only electric signals. The OFF and the ON state, also known as 0 or 1 state. These off and on states are processed by an array of transistors to derive logic and facilitate mathematical calculations. To instruct a computer to do anything, we first need to write an <a href="/algo">algorithm</a>. The sole purpose of the algorithm is to come up with an effecient way to tell the computer <b>how</b> to perform the task. Once we have the algorithm, we need to translate the algorithm to a language that the computer understands. This is where programming languages (or code) comes in. There are 100's of programming languages out there. You can virtuall use almost any language to instruct the computer to carry out the steps of your algorithm.
+        <h2>Introduction<br /><br />
+        <p class="front_page_desc"><br />What is programming? At the heart of the computer is the CPU (Central Processing Unit) and when you need to instruct a computer, this is the component you are speaking to. Now, a computer doesn't understand plain english. At a physical level the computer understands only electric signals. The OFF and the ON state, also known as 0 or 1 state. These off and on states are processed by an array of transistors to derive logic and facilitate mathematical calculations. <br /><br />To instruct a computer to do anything, we first need to write an <a href="/algo">algorithm</a>. The sole purpose of the algorithm is to come up with an effecient way to tell the computer <b>how</b> to perform the task. Once we have the algorithm, we need to translate the algorithm to a language that the computer understands. There are two kinds of languages - low level languages and high level languages.<br /><br /></p>
+        <h3 id="low">Low level programming</h3><br />
 
-              11110001 01010101 0101010 10010111 01010010 10101110 11101100 01001000 ........ ........
-         </p>
-        <p class="front_page_desc"><ul class="list">
-          <li>Step  1: Get the cash from your mom!</li>
-          <li>Step  2: Grab the car keys.</li>
-          <li>Step  3: Drive to the store.</li>
-          <li>Step  4: Walk to the aisle where the milk is</li>
-          <li>Step  5: Pick up the bottle</li>
-          <li>Step  6: Walk up to the cashiere</li>
-          <li>Step  7: Pay the cash</li>
-          <li>Step  8: Get the change</li>
-          <li>Step  9: Walk out the store get to your ride</li>
-          <li>Step 10: Head back home</li>
-          <li>Step 11: Give the milk bottle to your mom</li>
-        </ul>
-        </p>
-        <br /><p class="front_page_desc">
-          Awesome, That wasen't hard, was it? So when you were asked to get some milk - you followed a set of steps to get the job done. <br /><br />Generally in life we really don't lay down steps for every errand that we run. But for a computer to do any task, even the smallest one of just counting up from 1 to 10, needs a set of instructions. A computer cannot think on its own, It needs to be told what to do. <br /><br />Some comupters these days seem like they do "think", but at the heart of it, they are still following a set of instructions - it just comes across to us like the computer is thinking on its own. So...</p><br />
-          <h2>What is an Algorithm?</h2>
-          <p class="front_page_desc">
-             An Algorithm is just a name for a set of steps or rules that a comptuer follows to perfom a task or solve a problem. A set of instructions telling the computer <b>what to do</b> and <b>how to do it</b>. Thats about it. You <u>never</u> need to tell a computer <b>why!</b> it needs to be done.
-          </p>
-          <p class="front_page_desc">
-            It's great to have someone, or in this case, something do a task for you without asking why. Computers have really become useful all over the world because - firstly, it can perform calculations millions of times faster than the human mind and secondly it doesn't ever ask you why it has to do those calculations. This is the reason why computers are taking over many of the tasks and jobs that humans used to once do.
-          </p>
+        <p class="front_page_desc">  Low level computer languages are for the most perfect way to tell a CPU how to perform an activity. But it's not something that humans can do easily - as machines and humans speak entirely different languages - so different that machine and humans languages don't even share the concept of the alphabet. Computers only understand 1's and 0's. The best way to ask a computer to do a task is to translate your algorithm into streams of 1's an 0's and feed it into a computer.</p><br />
 
-          <p class="front_page_desc">
-            So now you are wondering, maybe the next time your mom asked you to get milk - I'll get a computer - a robot - to do the job for me. Perfect, no more distractions from watching your favourite TV show or playing the new Battlefield game on your console.
-          </p><br />
-
-          <h2>Writing an Algorithm</h2>
-          <p class="front_page_desc">
-            So you list down the steps the computer needs to follow. It's pretty much the 11 steps you laid above. Everything looks good - you have a set of steps and robot will start following these steps starting at the first step and then ending at last step. <br /><br />But suddenly you wonder, what if the car runs out of gas while the robot goes to the store. Hmm - you definitely do not want your robot to be stuck on the road. So you add another step between 2 and 3 where the robot which check if there is enough gas and then make a decision whether to take the car or ride the bike instead.
-          </p>
-
-          <p class="front_page_desc"><ul class="list">
-            <li>Step  2: Grab the car keys.</li>
-              <li> <b>-----  New Step:  Check if there is enough gas in the car - make a pitstop to put in gas.</b> </li>
-            <li>Step  3: Drive to the store.</li>
-            </ul>
-          </p>
-          <br />
-          <h3>if-then-else</h3>
-          <br />
-          <p class="front_page_desc">
-            The new step you added is called an <b>if-then</b> contruct. It's a pattern you will see everywhere in various algorithms. It's used for letting the computer make a decision. Let's break it down:
-            <pre class="front_page_desc">
-
-              <b>if</b> there is not enough gas to get to the store
-                  <b>then</b> make a pitstop at the closest gas station
-                <b>else</b> go directly to the store
-            </pre>
-          </p>
-          <p class="front_page_desc">
-            Perfect - now you can easily have the robot check to see the fuel guage and make a decision as to wheter you go straight to the store or to the gas station first.
-          </p>
-          <br />
+          <h4>Machine Code</h4><br />
 
 
-          <p class="front_page_desc">
-            Okay, this is looking good. But then you wonder, what if the store has run out of milk and the robot needs to go to a different store. We haven't instructed the robot what to do in this scenario. So let's do that now.
-          </p>
+            <p class="front_page_desc"> All computer programs actually look like this - A sequence of 1's and 0's - This is called machine code. <br /><br />
 
-         <p class="front_page_desc">
+          <p class="code-snippet">
+            111101010000101110001010110000101011001001011000100101001..........
+          </p> <br /><br />
 
-         </p>
+          <p class="front_page_desc">It probably doesn't look like any language you have seen before. Its actually tough to understand even for the best programmers of the world today. It is impractical to instruct your computer directly with the language of 1's and 0's. The binary langauge as you can see is so different compared to the language that humans speak. So, it was then decided to come up with a language that is a bit more "human readable".</p><br />
 
-          <ul class="list">
-            <li>Step  3: Drive to the store.</li>
-            <li> ---- New Step : Check <b>if</b> there's milk first with an employee of the store.</li>
-              <li>
-                Step 4: <b>then</b> Walk to the isle
-              </li>
-              <li>
-                ---- Another New Step : <b>else</b> drive to the next store
-              </li>
-          </ul>
-          <br />
 
-          <p class="front_page_desc">
-            Now there is no gaurantee that the next store will have milk either. So you may need to go to a 3rd store and maybe a 4th store.. who knows how many.
-          </p>
-          <br />
-          <h3>loops</h3>
-          <p class="front_page_desc">
-            So it looks like there is no way out than to go to each store and check out if they have milk before moving to the next. But, when you are writing instructions, how do you write instructions for each store visit with out even knowing if its store no. 3 or 5 or 10 that finally ends up being the one where milk is avaialble.
-            <br /><br />
-            We need a way to keep visiting new stores until we find one where milk is avaiable. So what we can try to do is define a new step called 'drive to the next store' and once we are at the new store we can check with the employee of they have the milk and then make a decision, if its there - we go ahead and buy it and if it isn't we go to the next store. Let's see how we can write that in steps:
-          </p>
-          <br />
-      <pre class="front_page_desc">
-            Step 3: Drive to the store.
-      --->  Step 4: <b>if</b> there's milk.
-      |     Step 5: <b>then</b> skip step 6 and go
-      |                        directly to step 7.
-      ----- Step 6: <b>else</b> there's no milk - so we drive
-                    to the next store and re-do steps
-                    starting from step 4
-            Step 7: Walk to the aisle where the milk is
-            Step 8: Pick up the bottle
-          </pre>
-          <p class="front_page_desc"> Now you can see that we are having a "loop" in our instructions, since from Step 6 we continuously keep going back to step 4. On Step 4 we check if have milk and if there isn't any milk, then the <b>if-then-else</b> construct takes us to step 6 which again brings back to step 4. </p>
-          <p class="front_page_desc">
-            Only when the robot finally finds the milk then we skip step 6 and go directly to Step 7. Until then the robot repeats or loops through the same set of instructions.
-          </p>
-          <p class="front_page_desc">
-            We have finally managed to describe a set of tasks to make our robot finally go jumping around from one step to another and sometimes skipping certain steps to finally achieve the end goal. Let's try to now list down all the steps of our algorithm  and tidy up the flow of steps so that we can make it more straighforward for us and the robot to understand.
-          </p>
 
-          <p class="front_page_desc"><ul class="list">
-            <li>Step  1: Get the cash from your mom!</li>
-            <li>Step  2: Grab the car keys.</li>
-            <li>Step  3: If there's enough gas in the car </li>
-            <li>Step  4: Then, drive directly to the store. </li>
-            <li>Step  5: Else, make a pitstop at the gas staion and then go to the store. </li>
-            <li>Step  6: Once at the store, check with an employee if there's milk.</li>
-            <li>Step  7: If there's milk then go to step 10</li>
-            <li>Step  8: else Walk out the store get to the car</li>
-            <li>Step  9:  drive to the next closest store and perform steps starting from step 6</li>
-            <li>Step  10: Walk to the aisle where the milk is </li>
-            <li>Step  11: Pick up the bottle</li>
-            <li>Step  12: Walk up to the cashiere</li>
-            <li>Step  13: Pay the cash</li>
-            <li>Step  14: Get the change</li>
-            <li>Step  15: Walk out the store get to the car</li>
-            <li>Step  16: Head back home</li>
-            <li>Step  17: Give the milk bottle to your mom</li>
-          </ul>
-          </p>
-          <p class="front_page_desc">
-            You now have created your very own algorithm! The algorthm instructs the robot to get milk from the store. No longer do you need to do dumb chores. However there's another potential problem - in case the robot doesn't find milk at the first store and has to go to the next one, what if the gas runs out then. Maybe it's always a better idea to just check the fuel guage everytime the robot decides to go to the next store. Try modifying the instructions and see how you can make the robot work better.
-          </p>
-          <br />
+          <h4>Assembler Code</h4><br />
+          <p class="front_page_desc">To make programming accessible to humans, they had to come up with a way to encode the stream of 1's and 0's into a human readable form. Let's imagine there is a sequence like 1001 0001 which the machine understands as adding 1 to a particular number that is stored in the computer. Every single time instead of writing this sequence to add 1 to a number, why not subtitute a tag like 'ADD 1' to signify those 1's and 0's to the computer. So now instead of feeding 1001 0001 everything, you can just use 'ADD 1' to instruct the computer. Things are now a bit more easier to understand. This type of programming language is called Assembler coding.
+
+            <p class="code-snippet">
+              ADD EAX,5
+            </p>
+
             <p class="front_page_desc">
-              Writing the algorithm is easy. But how do you make it better? How do you make it universal ? What if you lived in the first floor and needed the robot to climb a set of stairs? What if the robot had to use a revolving door? How many stores do you go to until you decide enough since your robot may just run out of power and needs to recharge? There are so many possibilities. You should always think about "the what if's"! You may never end up making the perfect robot at the beginning, but you will get there eventually. Once you do - can sell your robots and become a billionaire!
+              The above line asks the computer to take a number 5 and add it to whatever the number is that is stored in EAX. Note - EAX is actually a physical place in the micro processor of the computer. So as you can see, Assember code talks directly to the CPU and referring to physical areas within the CPU. </p>
+                <p class="front_page_desc">It's quite involved when you think about it. If you wanted your computer to add all numbers from 1 to a 100 and determine the average. You would need to decide which parts of the CPU you will use, how to use it, and determine where to store the intermediate results etc. But at the same time, the advantages of using an assembler is that you get full control to the underlying CPU and you can tell it exactly how the flow of 1's and 0's happen within your processor.
+            </p>
+            <br /><br />
+            <h3  id="high">High level programming</h3><br />
+
+
+            <p class="front_page_desc">When you to get the computer to add all the numbers from 1 to a 100 and then get the average of all the numbers - and you don't want to hassle yourself with the exact path the 1's and 0's take on your computer, then a high level language is the best way forward. What you need is something that gives you sufficent flexibility but also doesn't let you get bogged down with the details. </p><br />
+              <p class="front_page_desc">
+                Every computer processor manufacturer out there can also have their own way of tagging streams of bits. The labels and <b>syntax</b> used by one processor can be different on another. High level languages do not change, for the most part, from one processor to another. So when you learn these languages it's easy to write your instructions for any computer system using the same language.
+              </p><br />
+         <p class="front_page_desc">If you are looking to become a programmer and create great new things for the future - you will need to atleast learn a few important languages to begin with. These languages will be useful to you because they are the fundamental programmraning languages that will let you understand the basics of programming. These langauges are also widely used and almost any computer system understands them. Once you master them, all other langauges will be quite easy to understand. Let's look at some of them:</p><br />
+
+         <h4>C - Programming Language</h4>
+         <p class="front_page_desc">The name of the language is simply "C". It is called C because it was built to succeed a programming language called "B". The C programming language was created by Dennis Ritchie around the early 1970's when he was working at Bell Labs. The language is still used widely in virtually most computer systems. </p><br />
+         <p class="front_page_desc">The C programming language is the best way to talk to a computer directly.  Mostly suited for developing applicaitons that need a high degree of precision and speed and also to make custom software to suit just your own specific needs.  For example the software in your cellphone that converts your voice in to digital 1's and 0's is probably a C program at the heart of it - or the large supercomputers that predict the weather patterns have all their algorithms written in C. </p> <br />
+        <p class="front_page_desc">   The C programming lets you tap in the raw power of the computer and its capabilities much more than other high level languages. C therefore has a bit of dependency on the physical CPU that needs to be considered. If you are writing an application such as a webserver or a database, generally you might not have to worry about such issues. However if you are writing a <b>device driver</b> then you will need to take these dependencies into account.</p> <br />
+
+         <h4>Java</h4>
+         <p class="front_page_desc">Java, named after a type of coffee was built by James Gosling at Sun Microsystems in 1996. The programming language was intended to be 100% portable from one system to another. At the time, the world wide web was gaining popularity and given the flexibility of Java, web browsers were given the ability to run Java code within a browser leading to powerful apps that could be run from the internet rather than having the software installed on your computer.</p><br />
+         <p class="front_page_desc">Java also employees a programming feature called Object Oriented Programming, which makes it very powerful and flexible and allows of re-usability of code. You are able to build java in small components and integrate these small components into larger ones and incorporate the larger ones into even larger ones. It gave way to a hierarchical architecture which is very similar to have real life objects are made of smaller things combined or put together.</p>
+          <p class="front_page_desc">For example, a 2.0 Litre engine can be found in a VW Passat, but you could also find the same engine in a VW Jetta, but with a slight modification of having a Turbo Charger. The same engine of the Passat can be used, and then the turbocharger is added to it. Also the car looks differnt from the outside, but the functioning of the engine is the same, except for the turbocharger.  In the same way, Java lets you write instructions to build applications that look quite different from the outside, but makes use of the same components internally, maybe with a few additions to the core "engine" or in this case the core "code". You do not have to keep writing a new engine or a component everytime you make minor changes to the engine. </p> <br />
 
       </div>
       <div class="col-md-2">

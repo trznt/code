@@ -70,6 +70,22 @@
   font-size:20px;
 }
 
+.center {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.code-snippet-c {
+  font-weight: bold;
+  background-color: #292929;
+  color: #03ffdd;
+  padding: 20px;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
 .list li{
   padding-top:6px;
 }
@@ -106,4 +122,12 @@
   font-weight: bold;
   border-radius: 5px;
   background-color: #31c7de;
+}
+
+.code-snippet {
+  font-weight: bold;
+  background-color: #292929;
+  color: #02ff02;
+  padding: 20px;
+  border-radius: 4px;
 }

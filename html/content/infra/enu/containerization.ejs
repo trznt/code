@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/infra/enu/head.ejs %>
+  <title>Coding Introduction</title>
+</head>
+
+<header>
+  <% include ../../../partials/infra/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">Infrastructure</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/infra/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Containerization<br /><br />
+        <p class="front_page_desc"><br />Server virtualization mechanisms gave way to a another concept called containerization. In containerization, you can have your application services run in virtual systems called containers. The containers appear like isolated systems and can have their own operating system running on it, but share the more fundamental and basic operations with the host operating system. This makes containers quite smaller in footprint compated to a virtual machine. Containers are also much faster to create than VMs. A physical server therefore can run a whole lot more containers than it can run virtual machines.</p>
+
+        <p class="front_page_desc">Containrization has been around for several years. Sun Micrososystems developed Solaris Containrization for their SPARC systems in 2004. Solaris containers was quite popular in corporate datacenters where Solaris SPARC machines had large foot print. They helped companies maximize on their SPARC investment.</p>
+
+        <p class="front_page_desc">In 2013, another containerization tool was developed called Docker. Docker supports x86-64 archtiectures under <a>Apache License 2.0</a>. It became quite popular very quickly. Docker has also been adopted widely as an alternative for VMs.</p>
+
+        <p class="front_page_desc">As stated previously, a physical server can run more containers than it can run VMs. This provides even better utilization of the underlying server and gives a much lesser operating cost. Containerization also gives bettern scalability and flexibility to organize workload on demand.</p>
+
+        </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/infra/enu/tail.ejs %>
+  <% include ../../../partials/infra/enu/main-footer.ejs %>
