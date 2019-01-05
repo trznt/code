@@ -29,7 +29,7 @@ dbconn.openDB(0,function (error, res) {
   else {
     console.log("DBCONN is now set");
     dbhandle = res; // Setting DB Handle.
-    db = dbhandle.db("test"); //Setting db to point to the instance we are looking to write into.
+    db = dbhandle.db(process.env.DBNAME); //Setting db to point to the instance we are looking to write into.
     var cookie_key = db.collection('cookie_key');
     try {
       cookie_key.find({},{_id:0,key:1}).toArray(function(err,docs) {

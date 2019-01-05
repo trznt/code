@@ -269,9 +269,11 @@ module.exports = {
   listens: function(app) {
     var fs = require('fs');
     var https = require('https');
+    var key = process.env.HTTP_SSL_KEY;
+    var cert = process.env.HTTP_SSL_CERT;
     certoptions = {
-       key  : fs.readFileSync("../gate_ssl/web/key.pem"),
-       cert : fs.readFileSync("../gate_ssl/web/signedkey.cer")
+       key  : fs.readFileSync(key),
+       cert : fs.readFileSync(cert)
     };
     return https.createServer(certoptions, app).listen(3000, function () {
        console.log('Started https on 3000!');
