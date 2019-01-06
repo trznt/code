@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/main/enu/head.ejs %>
+  <title>Code Smart</title>
+</head>
+
+<header>
+  <% include ../../../partials/main/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container">
+      <h1 class="display-3"><br />Search Results</h1><br /><br /><br />
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-10">
+        <br />
+        <h3>There are <%= count %> result(s)!</h3><br />
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+          </tr>
+        </thead>
+        <tbody class="list_index">
+          <% for (var i = 0; i < results.length; i++) { %>
+            <tr>
+              <td style="width:10%"><%= i+1 %></td>
+              <td style="width:90%"><a href="<%= results[i].route %>"><%= results[i].page %></a></td>
+            </tr>
+           <% } %>
+
+        </tbody>
+      </table>
+      <div class="col-md-1">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+</body>
+  <% include ../../../partials/main/enu/tail.ejs %>
+  <% include ../../../partials/main/enu/main-footer.ejs %>

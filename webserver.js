@@ -1,3 +1,17 @@
+
+function search_trim(val) {
+  var words_to_strip = ['what','the','how','is','are','which','why','of','to','my'];
+  val = val.toLowerCase();
+  val = val.replace(/[&\/\\#,+()$~^%.'":*?<>{}]/g, '');
+  for (var i = 0; i < words_to_strip.length;i++) {
+    val = val.replace(words_to_strip[i],'');
+    console.log("loop")
+  }
+  val = val.replace(/\s\s+/g, ' ');
+  val = val.trim();
+  return val;
+}
+
 module.exports = {
   setRoutes: function(app,db) {
     var rand = require('csprng');
@@ -131,6 +145,23 @@ module.exports = {
         console.log(rand(160,36));
         res.end(rand(160,36));
         console.log('getsalt');
+      });
+
+      app.post('/search',urlencodedParser, function(req,res){
+        console.log("searching for " + req.body.search);
+        console.log("searching for only: " + search_trim(req.body.search));
+        var keywords = search_trim(req.body.search).split(' ');
+        db.collection("index").find({tags: { $in : keywords}}).toArray(function(err,results){
+          if (err) throw err;
+          if (results.length == 0)
+            res.render(__dirname + '/html/content/main/enu/search_0.ejs')
+          else {
+            var count = results.length;
+            console.log(results);
+            res.render(__dirname + '/html/content/main/enu/search.ejs',{count : count, results : results});
+          }
+        });
+
       });
 
       app.get('/api/edit_index_detail', function(req,res){
