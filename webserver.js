@@ -34,6 +34,16 @@ module.exports = {
         console.log('rendering embolden');
       });
 
+      app.get('/privacy',function(req,res){
+        res.render(__dirname + '/html/content/main/enu/privacy.ejs')
+        console.log('rendering privacy');
+      });
+
+      app.get('/terms',function(req,res){
+        res.render(__dirname + '/html/content/main/enu/terms.ejs')
+        console.log('rendering privacy');
+      });
+
       app.get('/algo',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/index.ejs')
         console.log('rendering Algo-Index');
