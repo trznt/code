@@ -20,6 +20,12 @@
   box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1), inset 0 -1px 0 rgba(0,0,0,.1);
 }
 
+.footer-bottom {
+	background: #de6231;
+	border-top: 1px solid #DDDDDD;
+  color: #FFFFFF;
+}
+
 .sidebar {
   border-right: 1px solid rgba(0,0,0,.1);
   font-size: 22px;
@@ -107,4 +113,14 @@
   font-weight: bold;
   border-radius: 5px;
   background-color: #31c7de;
+}
+
+.sitemap {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sitemap:hover {
+  font-weight: bold;
+  color: #ffffff;
 }

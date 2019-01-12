@@ -12,6 +12,15 @@ function search_trim(val) {
   return val;
 }
 
+function sortJSON(array) {
+  array.sort(function(a,b){
+    if (a.page < b.page) {return -1;}
+    if (a.page > b.page) {return 1;}
+    return 0;
+  });
+  return array;
+}
+
 module.exports = {
   setRoutes: function(app,db) {
     var rand = require('csprng');
@@ -42,6 +51,16 @@ module.exports = {
       app.get('/terms',function(req,res){
         res.render(__dirname + '/html/content/main/enu/terms.ejs')
         console.log('rendering privacy');
+      });
+
+      app.get('/about',function(req,res){
+        res.render(__dirname + '/html/content/main/enu/about.ejs')
+        console.log('rendering about');
+      });
+
+      app.get('/contact',function(req,res){
+        res.render(__dirname + '/html/content/main/enu/contact.ejs')
+        console.log('rendering contact');
       });
 
       app.get('/algo',function(req,res){
@@ -172,6 +191,41 @@ module.exports = {
           }
         });
 
+      });
+
+      app.get('/sitemap', function(req,res){
+        var categories = ['algo','infra','db','code'];
+        db.collection("index").find({category: { $in : categories}}).sort({"category":1}).toArray(function(err,results){
+          if (err) throw err;
+          console.log('Result count ' + results.length);
+          var resultSet = {};
+          resultSet.algo =[];
+          resultSet.db =[];
+          resultSet.infra =[];
+          resultSet.code =[];
+          var i = 0;
+          while (i < results.length) {
+            if (results[i].category == "algo") {
+                resultSet.algo.push(results[i]);
+            }
+            else if (results[i].category == "code") {
+                resultSet.code.push(results[i]);
+            }
+            else if (results[i].category == "db") {
+                resultSet.db.push(results[i]);
+            }
+            else if (results[i].category == "infra") {
+                resultSet.infra.push(results[i]);
+            }
+            i++;
+          }
+          resultSet.algo = sortJSON(resultSet.algo);
+          resultSet.code = sortJSON(resultSet.code);
+          resultSet.db = sortJSON(resultSet.db);
+          resultSet.infra = sortJSON(resultSet.infra);
+          console.log(results);
+          res.render(__dirname + '/html/content/main/enu/sitemap.ejs',{resultSet : resultSet});
+        });
       });
 
       app.get('/api/edit_index_detail', function(req,res){

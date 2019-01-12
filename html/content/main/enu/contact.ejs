@@ -15,7 +15,8 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron front_page">
     <div class="container">
-      <h1 class="display-3"><br />Search Results</h1><br /><br /><br />
+      <h1 class="display-3"><br />Contact Us</h1>
+      <br />
     </div>
   </div>
 
@@ -27,25 +28,11 @@
       </div>
       <div class="col-md-10">
         <br />
-        <h3>There are <%= count %> result(s)!</h3><br />
-      </div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-          </tr>
-        </thead>
-        <tbody class="list_index">
-          <% for (var i = 0; i < results.length; i++) { %>
-            <tr>
-              <td style="width:10%"><%= i+1 %></td>
-              <td style="width:90%"><a href="<%= results[i].route %>"><%= results[i].page %></a></td>
-            </tr>
-           <% } %>
+        <p class="front_page_desc">If you would like to get in touch with us for anything at all, then you can reach us at: <br /><br /></p>
+        <p class="front_page_desc"><span class="fa fa-envelope" aria-hidden="true"></span>      admin@trznt.com <br />
+        <span class="fa fa-phone" aria-hidden="true"></span>     (+91) 80 2854 1255<br /><br /><br /></p>
 
-        </tbody>
-      </table>
+
       <div class="col-md-1">
       </div>
     </div>

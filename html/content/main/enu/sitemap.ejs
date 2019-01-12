@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/main/enu/head.ejs %>
+  <title>Code Smart</title>
+</head>
+
+<header>
+  <% include ../../../partials/main/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container">
+      <h1 class="display-3"><br />Sitemap</h1>
+      <br />
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <div class="col-md-12">
+        <br />
+        <h3>Sitemap</h3><br /><br />
+        <p class="front_page_desc">Click on a link to go directly to the page:</p>
+    </div>
+  </div><br /><br />
+    <div class="row">
+        <div class="col-md-4">
+          <h3><a href="/algo">Algorithms</a></h3>
+    <% for (var i = 0; i < resultSet.algo.length; i++) { %>
+        <p><a class="sitemap" href="<%= resultSet.algo[i].route %>"><%= resultSet.algo[i].page %></a></p>
+            <% } %>
+    </div>
+    <div class="col-md-4">
+      <h3><a href="/code">Code</a></h3>
+    <% for (var i = 0; i < resultSet.code.length; i++) { %>
+        <p><a class="sitemap" href="<%= resultSet.code[i].route %>"><%= resultSet.code[i].page %></a></p>
+            <% } %>
+    </div>
+    <div class="col-md-4">
+      <h3><a href="/db">Database</a></h3>
+    <% for (var i = 0; i < resultSet.db.length; i++) { %>
+    <p><a class="sitemap" href="<%= resultSet.db[i].route %>"><%= resultSet.db[i].page %></a></p>
+        <% } %>
+    </div>
+  </div><br /><br />
+    <div class="row">
+        <div class="col-md-4">
+            <h3><a href="/infra">Infrastructure</a></h3>
+    <% for (var i = 0; i < resultSet.infra.length; i++) { %>
+        <p><a class="sitemap" href="<%= resultSet.infra[i].route %>"><%= resultSet.infra[i].page %></a></p>
+            <% } %>
+    </div>
+    <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+
+
+    <hr>
+<br /><br />
+  </div> <!-- /container -->
+
+</main>
+
+  <% include ../../../partials/main/enu/tail.ejs %>
+  <% include ../../../partials/main/enu/main-footer.ejs %>

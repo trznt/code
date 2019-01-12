@@ -19,6 +19,12 @@
   background-color: #70151e;
 }
 
+.footer-bottom {
+	background: #70151e;
+	border-top: 1px solid #DDDDDD;
+  color: #FFFFFF;
+}
+
 .sidebar {
   border-right: 1px solid rgba(0,0,0,.1);
   font-size: 22px;
@@ -83,4 +89,14 @@
 
 .my-jumbotron-btn:hover {
   background-color: #1c5c8a;
+}
+
+.sitemap {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sitemap:hover {
+  font-weight: bold;
+  color: #ffffff;
 }
