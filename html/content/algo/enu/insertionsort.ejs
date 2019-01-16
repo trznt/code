@@ -1,0 +1,400 @@
+
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <% include ../../../partials/algo/enu/head.ejs %>
+    <title>Sorting Algorithms</title>
+  </head>
+
+  <header>
+    <% include ../../../partials/algo/enu/main-header.ejs %>
+  </header>
+
+  <body>
+  <main role="main">
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron front_page">
+      <div class="container"><br /><br /><br /><br /><br />
+        <h1 class="display-1">Algorithms</h1>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <!-- Example row of columns -->
+      <br />
+      <div class="row">
+        <% include ../../../partials/algo/enu/sidenav.ejs %>
+        <div class="col">
+          <br />
+          <h2>Insertion Sort</h2><br /><br />
+          <p class="front_page_desc"><br />Insertion sort is a great algorithm for sorting small lists of arrays. Insertion sort is quite good for sorting arrays that are already partially sorted. You may now wonder, "So do I need to keep checking if each small list of items I come across is partially sorted, and if so, use insertion sort ?". <br /><br /> Well in life, we generally don't come across things fully sorted, let's say A to Z - which can be called a best case scenario, unless you are in a library or reading the index page of a large book, or the attendence register at school. The worst case scenario is where the list is sorted but in the revsrse direction [Z-A]. If you feed a list sorted in the reverse direction into a bubble sort algorithm, it would have to do a whole lot of work to sort it [A-Z]. In any case probability dictates that the chances of finding a list out there in the wild which is sorted in the reverse direction is generally quite low. You can always expect things to either sorted or partially sorted. </p><br />
+          <p class="front_page_desc">
+            Let's consider a shelf in your home where you have kept your favourite books!
+          </p>
+          <br /><br /><br />
+          <div class="container fluid">
+            <div class="row">
+              <ul class="display_books">
+              <li ><div class="book">Pride and Prejudice</div></li>
+              <li ><div class="book">Catch-22</div></li>
+              <li ><div class="book">Art of War</div></li>
+              <li ><div class="book">Fahrenheit 451</div></li>
+              <li ><div class="book">Moby Dick</div></li>
+              <li ><div class="book">Dune</div></li>
+              <li ><div class="book">Game of Thrones</div></li>
+              <li ><div class="book">Metro 2033</div></li>
+            </ul>
+            </div>
+         </div><br /><br /><br />
+           <p class="front_page_desc">
+              We want to sort these books in alphabetic order from left to right. How would you go about arraning the books? Here's one way.<br />
+              <ol class="front_page_desc">
+                <li>
+                  We keep the first book where it is and let's call that the sorted part of the book shelf and the rest unsorted.
+                </li>
+                <li>
+                  We take the next book and add it to the sorted part of the shelf according to the alphabet. Note - you may need to slide books to the left and right to place the next book in it's right place.
+                </li>
+                <li>
+                  Keep doing this until all the books are in the sorted section of the shelf. At the end, the entire shelf will be sorted.
+                </li>
+              </ol><br /><br /><br />
+            </p>
+            <div class="container fluid">
+              <div class="row">
+                <ul class="display_books">
+                <li ><div class="book sorted">Pride and Prejudice</div></li>
+                <li ><div class="book">Catch-22</div></li>
+                <li ><div class="book">Art of War</div></li>
+                <li ><div class="book">Fahrenheit 451</div></li>
+                <li ><div class="book empty"></div></li>
+                <li ><div class="book">Moby Dick</div></li>
+                <li ><div class="book">Dune</div></li>
+                <li ><div class="book">Game of Thrones</div></li>
+                <li ><div class="book">Metro 2033</div></li>
+              </ul>
+              </div>
+           </div><br /><br /><br />
+ <p class="front_page_desc">
+   Here 6 and 7 are in the ascending order, so we don't have to swap any blocks, so we compare the next adjacent set:
+ </p><br />
+ <div class="container fluid">
+    <div class="row">
+    <ul class="display_blocks">
+      <li>6</li>
+      <div class="comparer">
+        <li>7</li>
+        <li>9</li>
+      </div>
+      <li>2</li>
+      <li>4</li>
+      <li>8</li>
+      <li>1</li>
+      <li>3</li>
+      <li>5</li>
+    </ul>
+    </div>
+  </div>
+  <p class="front_page_desc">
+    The blocks 7 and 9 are also in the ascending order so we compare the next adjacent set:
+  </p><br />
+  <div class="container fluid">
+     <div class="row">
+     <ul class="display_blocks">
+       <li>6</li>
+      <li>7</li>
+       <div class="comparer">
+         <li>9</li>
+         <li>2</li>
+       </div>
+       <li>4</li>
+       <li>8</li>
+       <li>1</li>
+       <li>3</li>
+       <li>5</li>
+     </ul>
+     </div>
+   </div>
+   <p class="front_page_desc">
+     Now, we can see that 2 and 9 are not in the ascending order, so we swap their locations in the set.
+   </p><br />
+   <div class="container fluid">
+      <div class="row">
+      <ul class="display_blocks">
+        <li>6</li>
+       <li>7</li>
+        <div class="comparer-swap">
+          <li>2</li>
+          <li>9</li>
+        </div>
+        <li>4</li>
+        <li>8</li>
+        <li>1</li>
+        <li>3</li>
+        <li>5</li>
+      </ul>
+      </div>
+    </div>
+    <p class="front_page_desc">
+     The blocks 9 and 2 are swapped so that this set of adjacent blocks are in the right order.
+    </p><br />
+    <div class="container fluid">
+       <div class="row">
+       <ul class="display_blocks">
+         <li>6</li>
+        <li>7</li>
+         <li>2</li>
+         <div class="comparer">
+           <li>9</li>
+           <li>4</li>
+         </div>
+         <li>8</li>
+         <li>1</li>
+         <li>3</li>
+         <li>5</li>
+       </ul>
+       </div>
+     </div>
+     <p class="front_page_desc">
+      Now let's move to the next set. Here 9 and 4 are not in the right order. So we swap them.
+     </p><br />
+     <div class="container fluid">
+        <div class="row">
+        <ul class="display_blocks">
+          <li>6</li>
+         <li>7</li>
+          <li>2</li>
+          <div class="comparer-swap">
+            <li>4</li>
+            <li>9</li>
+          </div>
+          <li>8</li>
+          <li>1</li>
+          <li>3</li>
+          <li>5</li>
+        </ul>
+        </div>
+      </div>
+      <p class="front_page_desc">
+       They are now swapped.
+      </p><br />
+      <div class="container fluid">
+         <div class="row">
+         <ul class="display_blocks">
+           <li>6</li>
+          <li>7</li>
+           <li>2</li>
+           <li>4</li>
+           <div class="comparer">
+             <li>9</li>
+             <li>8</li>
+           </div>
+           <li>1</li>
+           <li>3</li>
+           <li>5</li>
+         </ul>
+         </div>
+       </div>
+       <p class="front_page_desc">
+        Looks like the next set, 9 and 8 also needs to be swapped as they are not in the right order.
+       </p><br />
+       <div class="container fluid">
+          <div class="row">
+          <ul class="display_blocks">
+            <li>6</li>
+           <li>7</li>
+            <li>2</li>
+            <li>4</li>
+            <div class="comparer-swap">
+              <li>8</li>
+              <li>9</li>
+            </div>
+            <li>1</li>
+            <li>3</li>
+            <li>5</li>
+          </ul>
+          </div>
+        </div>
+        <p class="front_page_desc">
+         Blocks 9 and 8 are now in the right order.
+        </p><br />
+        <div class="container fluid">
+           <div class="row">
+           <ul class="display_blocks">
+             <li>6</li>
+            <li>7</li>
+             <li>2</li>
+             <li>4</li>
+             <li>8</li>
+             <div class="comparer">
+               <li>9</li>
+               <li>1</li>
+             </div>
+             <li>3</li>
+             <li>5</li>
+           </ul>
+           </div>
+         </div>
+         <p class="front_page_desc">
+          Blocks 9 and 1 are not in the right order and need to be swapped.
+         </p><br />
+         <div class="container fluid">
+            <div class="row">
+            <ul class="display_blocks">
+              <li>6</li>
+             <li>7</li>
+              <li>2</li>
+              <li>4</li>
+              <li>8</li>
+              <div class="comparer-swap">
+                <li>1</li>
+                <li>9</li>
+              </div>
+              <li>3</li>
+              <li>5</li>
+            </ul>
+            </div>
+          </div>
+          <p class="front_page_desc">
+           We now swap 9 and 1.
+          </p><br />
+          <div class="container fluid">
+             <div class="row">
+             <ul class="display_blocks">
+               <li>6</li>
+              <li>7</li>
+               <li>2</li>
+               <li>4</li>
+               <li>8</li>
+               <li>1</li>
+               <div class="comparer">
+                 <li>9</li>
+                 <li>3</li>
+               </div>
+               <li>5</li>
+             </ul>
+             </div>
+           </div>
+           <p class="front_page_desc">
+          Comparing 9 and 3 we know it needs a swap.
+           </p><br />
+           <div class="container fluid">
+              <div class="row">
+              <ul class="display_blocks">
+                <li>6</li>
+               <li>7</li>
+                <li>2</li>
+                <li>4</li>
+                <li>8</li>
+                <li>1</li>
+                <div class="comparer-swap">
+                  <li>3</li>
+                  <li>9</li>
+                </div>
+                <li>5</li>
+              </ul>
+              </div>
+            </div>
+            <p class="front_page_desc">
+           They are now swapped. We move to the next one.
+            </p><br />
+            <div class="container fluid">
+               <div class="row">
+               <ul class="display_blocks">
+                 <li>6</li>
+                <li>7</li>
+                 <li>2</li>
+                 <li>4</li>
+                 <li>8</li>
+                 <li>1</li>
+                 <li>3</li>
+                 <div class="comparer">
+                   <li>9</li>
+                   <li>5</li>
+                 </div>
+               </ul>
+               </div>
+             </div>
+             <p class="front_page_desc">
+            We know 9 and 5 need to be swapped.
+             </p><br />
+             <div class="container fluid">
+                <div class="row">
+                <ul class="display_blocks">
+                  <li>6</li>
+                 <li>7</li>
+                  <li>2</li>
+                  <li>4</li>
+                  <li>8</li>
+                  <li>1</li>
+                  <li>3</li>
+                  <div class="comparer-swap">
+                    <li>5</li>
+                    <li>9</li>
+                  </div>
+                </ul>
+                </div>
+              </div>
+              <p class="front_page_desc">
+             Blocks 5 and 9 are now swapped. We are at the end of our first loop. In computer science, completing a loop of actions is also called an <b>iteration</b>.<br /><br />
+             We have completed our first iteration and what you can see is that, in essence, it almost seems like block 9 has sort of "bubbled" through the positions in the set eventually going to the right most position. Taking a step back you also see that, 9 is the highest numbered block in the list and it has now reached the largest spot.
+           </p><br /><br />
+           <p class="front_page_desc">
+             In the next iteration, we will start with the first item in the list. We start with 6 and keep comparing to the adjacent block and swapping if needed until we get to the end of the list once again. Try this out and you will see that at the end of the second iteration the list will look like this:
+           </p>
+           <div class="container fluid">
+              <div class="row">
+              <ul class="display_blocks">
+                <li>6</li>
+               <li>2</li>
+                <li>4</li>
+                <li>7</li>
+                <li>1</li>
+                <li>3</li>
+                <li>5</li>
+                  <li>8</li>
+                  <li>9</li>
+              </ul>
+              </div>
+            </div>
+            <br /><br />
+            <p class="front_page_desc">
+             We continue to keep iterating through until there are zero swaps in an iteration. If there are zero swaps, it must mean that all the blocks are arranged in the ascending order, and our algorthm us now done.
+             </p>
+             <div class="container fluid">
+                <div class="row">
+                <ul class="display_blocks">
+                  <li>1</li>
+                 <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                </ul>
+                </div>
+              </div>
+              <p class="front_page_desc">
+               We now have a fully sorted list!
+               </p>
+
+  <br /> <br />
+
+
+          <br />  <br />  <br /><br />  <br />  <br />
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+
+      <hr>
+
+    </div> <!-- /container -->
+
+  </main>
+
+    <% include ../../../partials/algo/enu/tail.ejs %>
+    <% include ../../../partials/algo/enu/main-footer.ejs %>

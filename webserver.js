@@ -128,9 +128,14 @@ module.exports = {
         console.log('rendering Algo-Index');
       });
 
-      app.get('/algo/bubblesorting',function(req,res){
-        res.render(__dirname + '/html/content/algo/enu/bubblesorting.ejs')
-        console.log('rendering Algo-Index');
+      app.get('/algo/bubblesort',function(req,res){
+        res.render(__dirname + '/html/content/algo/enu/bubblesort.ejs')
+        console.log('rendering Algo-bubblesort');
+      });
+
+      app.get('/algo/insertionsort',function(req,res){
+        res.render(__dirname + '/html/content/algo/enu/insertionsort.ejs')
+        console.log('rendering Algo-insertionsort');
       });
 
       app.get('/g8w31',function(req,res){

@@ -86,9 +86,25 @@
   text-align: center;
 }
 
+.display_books li {
+  float: left;
+  width: 48px;
+}
+
+.display_books {
+  list-style-type: none;
+  text-align: center;
+}
+
 .comparer {
   display: inline-block;
   float: left;
+  border-style: dotted;
+  border: 10px;
+  background-color: #777777;
+}
+
+.comparer-book {
   border-style: dotted;
   border: 10px;
   background-color: #777777;
@@ -123,4 +139,29 @@
 .sitemap:hover {
   font-weight: bold;
   color: #ffffff;
+}
+
+.book {
+  -webkit-transform: rotate(-290deg);
+  -moz-transform: rotate(-290deg);
+  -ms-transform: rotate(-2790deg);
+  -o-transform: rotate(-290deg);
+  transform: rotate(-290deg);
+  padding: 10px;
+  width: 180px;
+  height: 40px;
+  margin: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #31c7de;
+  font-size: 18px;
+  text-align: center;
+}
+
+.sorted {
+  background-color: #777777;
+}
+
+.empty {
+  background-color: #ffffff;
 }
