@@ -48,344 +48,265 @@
             </div>
          </div><br /><br /><br />
            <p class="front_page_desc">
-              We want to sort these books in alphabetic order from left to right. How would you go about arraning the books? Here's one way.<br />
+              We want to sort these books in alphabetic order from left to right. How would you go about arraning the books? Here's one way - let's move all the books to the left and make space in the right side. Let's call the left side of the shelf, the unsorted side and the right side of the shelf which is presently empty will be the sorted side.<br /><br /><br />
+              <div class="container fluid">
+                <div class="row">
+                  <ul class="display_books">
+                  <li ><div class="book empty"></div></li>
+                  <li ><div class="book empty"></div></li>
+                  <li ><div class="book unsorted">Pride and Prejudice</div></li>
+                  <li ><div class="book unsorted">Catch-22</div></li>
+                  <li ><div class="book unsorted">Art of War</div></li>
+                  <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                  <li ><div class="book unsorted">Moby Dick</div></li>
+                  <li ><div class="book unsorted">Dune</div></li>
+                  <li ><div class="book unsorted">Game of Thrones</div></li>
+                  <li ><div class="book unsorted">Metro 2033</div></li>
+                </ul>
+                </div>
+             </div><br /><br /><br /><br />
+             <p class="front_page_desc">
+               Let's go over the steps that we will use to sort the books:
+             </p>
               <ol class="front_page_desc">
                 <li>
-                  We keep the first book where it is and let's call that the sorted part of the book shelf and the rest unsorted.
+                  We will take the first book and keep it in the sorted side. In this case it is the book named "Pride and Prejudice". <br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+
+                      <li ><div class="book unsorted">Catch-22</div></li>
+                      <li ><div class="book unsorted">Art of War</div></li>
+                      <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
                 </li>
                 <li>
-                  We take the next book and add it to the sorted part of the shelf according to the alphabet. Note - you may need to slide books to the left and right to place the next book in it's right place.
+                  We take the next book and add it to the sorted part of the shelf according to the alphabet. The next book is  "Catch-22". Note - you may need to slide books in the sorted section to the left and right to place the next book in it's right place. In this case we will move "Pride and Prejudice" a little to the left to make space for "Catch-22" as C comes before P in the alphabet.<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book spot"></div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Catch-22</div></li>
+                      <li ><div class="book unsorted">Art of War</div></li>
+                      <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
                 </li>
                 <li>
-                  Keep doing this until all the books are in the sorted section of the shelf. At the end, the entire shelf will be sorted.
+                  Now we will take the "Catch-22" book and keep it in the spot we opened up.<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Art of War</div></li>
+                      <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
                 </li>
-              </ol><br /><br /><br />
+                <li>
+                  The next book is "Art of War". To place this in the sorted list, we will need to move both "Pride and Prejudice" and "Catch-22" to the left to make space.<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book spot"></div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Art of War</div></li>
+                      <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                  We place "Art of War" in it's place.<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                The next book is "Fahrenheit 451". To place this in the sorted section, we will need to move only "Pride and Prejudice" once to the left to make space.<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book spot"></div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Fahrenheit 451</div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                Let's place "Fahrenheit 451" in it's place.<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Fahrenheit 451</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Moby Dick</div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                We will continue making up space in the sorted section until all bookes are moved from the unsorted section to the sorted section. Let's see how each book get's placed. Next is "Moby Dick"<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Fahrenheit 451</div></li>
+                      <li ><div class="book sorted">Moby Dick</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Dune</div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                Next is "Dune"<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Dune</div></li>
+                      <li ><div class="book sorted">Fahrenheit 451</div></li>
+                      <li ><div class="book sorted">Moby Dick</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Game of Thrones</div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                Next is "Game of Thornes"<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Dune</div></li>
+                      <li ><div class="book sorted">Fahrenheit 451</div></li>
+                      <li ><div class="book sorted">Game of Thrones</div></li>
+                      <li ><div class="book sorted">Moby Dick</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book unsorted">Metro 2033</div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+                <li>
+                Finally "Metro 2033"<br /><br /><br />
+                  <div class="container fluid">
+                    <div class="row">
+                      <ul class="display_books">
+                      <li ><div class="book sorted">Art of War</div></li>
+                      <li ><div class="book sorted">Catch-22</div></li>
+                      <li ><div class="book sorted">Dune</div></li>
+                      <li ><div class="book sorted">Fahrenheit 451</div></li>
+                      <li ><div class="book sorted">Game of Thrones</div></li>
+                      <li ><div class="book sorted">Metro 2033</div></li>
+                      <li ><div class="book sorted">Moby Dick</div></li>
+                      <li ><div class="book sorted">Pride and Prejudice</div></li>
+                      <li ><div class="book empty"></div></li>
+                      <li ><div class="book empty"></div></li>
+                    </ul>
+                    </div>
+                 </div><br /><br /><br /><br />
+                </li>
+              </ol><br />
             </p>
-            <div class="container fluid">
-              <div class="row">
-                <ul class="display_books">
-                <li ><div class="book sorted">Pride and Prejudice</div></li>
-                <li ><div class="book">Catch-22</div></li>
-                <li ><div class="book">Art of War</div></li>
-                <li ><div class="book">Fahrenheit 451</div></li>
-                <li ><div class="book empty"></div></li>
-                <li ><div class="book">Moby Dick</div></li>
-                <li ><div class="book">Dune</div></li>
-                <li ><div class="book">Game of Thrones</div></li>
-                <li ><div class="book">Metro 2033</div></li>
-              </ul>
-              </div>
-           </div><br /><br /><br />
+
  <p class="front_page_desc">
-   Here 6 and 7 are in the ascending order, so we don't have to swap any blocks, so we compare the next adjacent set:
+  That's it - we have completed successfully sorting the shelf using the insertion sort method. Quite intuitive isn't it ?
  </p><br />
- <div class="container fluid">
-    <div class="row">
-    <ul class="display_blocks">
-      <li>6</li>
-      <div class="comparer">
-        <li>7</li>
-        <li>9</li>
-      </div>
-      <li>2</li>
-      <li>4</li>
-      <li>8</li>
-      <li>1</li>
-      <li>3</li>
-      <li>5</li>
-    </ul>
-    </div>
-  </div>
-  <p class="front_page_desc">
-    The blocks 7 and 9 are also in the ascending order so we compare the next adjacent set:
-  </p><br />
-  <div class="container fluid">
-     <div class="row">
-     <ul class="display_blocks">
-       <li>6</li>
-      <li>7</li>
-       <div class="comparer">
-         <li>9</li>
-         <li>2</li>
-       </div>
-       <li>4</li>
-       <li>8</li>
-       <li>1</li>
-       <li>3</li>
-       <li>5</li>
-     </ul>
-     </div>
-   </div>
-   <p class="front_page_desc">
-     Now, we can see that 2 and 9 are not in the ascending order, so we swap their locations in the set.
-   </p><br />
-   <div class="container fluid">
-      <div class="row">
-      <ul class="display_blocks">
-        <li>6</li>
-       <li>7</li>
-        <div class="comparer-swap">
-          <li>2</li>
-          <li>9</li>
-        </div>
-        <li>4</li>
-        <li>8</li>
-        <li>1</li>
-        <li>3</li>
-        <li>5</li>
-      </ul>
-      </div>
-    </div>
-    <p class="front_page_desc">
-     The blocks 9 and 2 are swapped so that this set of adjacent blocks are in the right order.
-    </p><br />
-    <div class="container fluid">
-       <div class="row">
-       <ul class="display_blocks">
-         <li>6</li>
-        <li>7</li>
-         <li>2</li>
-         <div class="comparer">
-           <li>9</li>
-           <li>4</li>
-         </div>
-         <li>8</li>
-         <li>1</li>
-         <li>3</li>
-         <li>5</li>
-       </ul>
-       </div>
-     </div>
-     <p class="front_page_desc">
-      Now let's move to the next set. Here 9 and 4 are not in the right order. So we swap them.
-     </p><br />
-     <div class="container fluid">
-        <div class="row">
-        <ul class="display_blocks">
-          <li>6</li>
-         <li>7</li>
-          <li>2</li>
-          <div class="comparer-swap">
-            <li>4</li>
-            <li>9</li>
-          </div>
-          <li>8</li>
-          <li>1</li>
-          <li>3</li>
-          <li>5</li>
-        </ul>
-        </div>
-      </div>
-      <p class="front_page_desc">
-       They are now swapped.
-      </p><br />
-      <div class="container fluid">
-         <div class="row">
-         <ul class="display_blocks">
-           <li>6</li>
-          <li>7</li>
-           <li>2</li>
-           <li>4</li>
-           <div class="comparer">
-             <li>9</li>
-             <li>8</li>
-           </div>
-           <li>1</li>
-           <li>3</li>
-           <li>5</li>
-         </ul>
-         </div>
-       </div>
-       <p class="front_page_desc">
-        Looks like the next set, 9 and 8 also needs to be swapped as they are not in the right order.
-       </p><br />
-       <div class="container fluid">
-          <div class="row">
-          <ul class="display_blocks">
-            <li>6</li>
-           <li>7</li>
-            <li>2</li>
-            <li>4</li>
-            <div class="comparer-swap">
-              <li>8</li>
-              <li>9</li>
-            </div>
-            <li>1</li>
-            <li>3</li>
-            <li>5</li>
-          </ul>
-          </div>
-        </div>
-        <p class="front_page_desc">
-         Blocks 9 and 8 are now in the right order.
-        </p><br />
-        <div class="container fluid">
-           <div class="row">
-           <ul class="display_blocks">
-             <li>6</li>
-            <li>7</li>
-             <li>2</li>
-             <li>4</li>
-             <li>8</li>
-             <div class="comparer">
-               <li>9</li>
-               <li>1</li>
-             </div>
-             <li>3</li>
-             <li>5</li>
-           </ul>
-           </div>
-         </div>
-         <p class="front_page_desc">
-          Blocks 9 and 1 are not in the right order and need to be swapped.
-         </p><br />
-         <div class="container fluid">
-            <div class="row">
-            <ul class="display_blocks">
-              <li>6</li>
-             <li>7</li>
-              <li>2</li>
-              <li>4</li>
-              <li>8</li>
-              <div class="comparer-swap">
-                <li>1</li>
-                <li>9</li>
-              </div>
-              <li>3</li>
-              <li>5</li>
-            </ul>
-            </div>
-          </div>
-          <p class="front_page_desc">
-           We now swap 9 and 1.
-          </p><br />
-          <div class="container fluid">
-             <div class="row">
-             <ul class="display_blocks">
-               <li>6</li>
-              <li>7</li>
-               <li>2</li>
-               <li>4</li>
-               <li>8</li>
-               <li>1</li>
-               <div class="comparer">
-                 <li>9</li>
-                 <li>3</li>
-               </div>
-               <li>5</li>
-             </ul>
-             </div>
-           </div>
-           <p class="front_page_desc">
-          Comparing 9 and 3 we know it needs a swap.
-           </p><br />
-           <div class="container fluid">
-              <div class="row">
-              <ul class="display_blocks">
-                <li>6</li>
-               <li>7</li>
-                <li>2</li>
-                <li>4</li>
-                <li>8</li>
-                <li>1</li>
-                <div class="comparer-swap">
-                  <li>3</li>
-                  <li>9</li>
-                </div>
-                <li>5</li>
-              </ul>
-              </div>
-            </div>
-            <p class="front_page_desc">
-           They are now swapped. We move to the next one.
-            </p><br />
-            <div class="container fluid">
-               <div class="row">
-               <ul class="display_blocks">
-                 <li>6</li>
-                <li>7</li>
-                 <li>2</li>
-                 <li>4</li>
-                 <li>8</li>
-                 <li>1</li>
-                 <li>3</li>
-                 <div class="comparer">
-                   <li>9</li>
-                   <li>5</li>
-                 </div>
-               </ul>
-               </div>
-             </div>
-             <p class="front_page_desc">
-            We know 9 and 5 need to be swapped.
-             </p><br />
-             <div class="container fluid">
-                <div class="row">
-                <ul class="display_blocks">
-                  <li>6</li>
-                 <li>7</li>
-                  <li>2</li>
-                  <li>4</li>
-                  <li>8</li>
-                  <li>1</li>
-                  <li>3</li>
-                  <div class="comparer-swap">
-                    <li>5</li>
-                    <li>9</li>
-                  </div>
-                </ul>
-                </div>
-              </div>
-              <p class="front_page_desc">
-             Blocks 5 and 9 are now swapped. We are at the end of our first loop. In computer science, completing a loop of actions is also called an <b>iteration</b>.<br /><br />
-             We have completed our first iteration and what you can see is that, in essence, it almost seems like block 9 has sort of "bubbled" through the positions in the set eventually going to the right most position. Taking a step back you also see that, 9 is the highest numbered block in the list and it has now reached the largest spot.
-           </p><br /><br />
-           <p class="front_page_desc">
-             In the next iteration, we will start with the first item in the list. We start with 6 and keep comparing to the adjacent block and swapping if needed until we get to the end of the list once again. Try this out and you will see that at the end of the second iteration the list will look like this:
-           </p>
-           <div class="container fluid">
-              <div class="row">
-              <ul class="display_blocks">
-                <li>6</li>
-               <li>2</li>
-                <li>4</li>
-                <li>7</li>
-                <li>1</li>
-                <li>3</li>
-                <li>5</li>
-                  <li>8</li>
-                  <li>9</li>
-              </ul>
-              </div>
-            </div>
-            <br /><br />
-            <p class="front_page_desc">
-             We continue to keep iterating through until there are zero swaps in an iteration. If there are zero swaps, it must mean that all the blocks are arranged in the ascending order, and our algorthm us now done.
-             </p>
-             <div class="container fluid">
-                <div class="row">
-                <ul class="display_blocks">
-                  <li>1</li>
-                 <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  <li>6</li>
-                  <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                </ul>
-                </div>
-              </div>
-              <p class="front_page_desc">
-               We now have a fully sorted list!
-               </p>
+ <p class="front_page_desc">
+  Let's write down the algorithm of what we just did:
 
-  <br /> <br />
+  <ol class="front_page_desc">
+    <li>
+      Mark the first item as sorted.
+    </li>
+    <li>
+      Pick the next item and check with the last element of the sorted list. (If there is no next item. we are done with sorting the list.)
+    </li>
+    <li>
+      If the picked item is greater than or equal the current element, leave it in it's place and go to the step [2];
+    </li>
+    <li>
+      If the picked item is less than the current element, move all elements greater that the picked element being checked, starting from the end of the sorted list one space to the left until a spot is opened up to put the picked element in. Once done go to step [2];
+    </li>
 
 
-          <br />  <br />  <br /><br />  <br />  <br />
-        </div>
+  </ol>
+
+ </p><br />
+         </div>
         <div class="col-md-2">
         </div>
       </div>
