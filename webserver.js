@@ -12,6 +12,19 @@ function search_trim(val) {
   return val;
 }
 
+function getFormattedDate(date) {
+  var fdate = new Date(date);
+  const monthNames = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  var year = fdate.getFullYear();
+  var month = fdate.getMonth();
+  var dt = fdate.getDate();
+
+  if (dt < 10)
+    dt = "0" + dt;
+    console.log(dt + "-" + monthNames[month] + "-" + year);
+  return (dt + "-" + monthNames[month] + "-" + year);
+}
+
 function sortJSON(array) {
   array.sort(function(a,b){
     if (a.page < b.page) {return -1;}
@@ -33,9 +46,30 @@ module.exports = {
       app.use(urlencodedParser);
       app.set('view engine','ejs');
 
+      app.get('/googlee0ab6be40d7ad1a3.html',function(req,res){
+        res.sendFile('/home/node/googlee0ab6be40d7ad1a3.html')
+        console.log('rendering Google Verify');
+      });
+
       app.get('/',function(req,res){
-        res.render(__dirname + '/html/content/main/enu/index.ejs')
-        console.log('rendering Index');
+        db.collection("index").find().sort({created: 1}).toArray(function(err,results){
+          if (err) throw err;
+          if (results.length == 0)
+            res.render(__dirname + '/html/content/main/enu/search_0.ejs')
+          else {
+            var resultObj = [];
+            var i = 0;
+            for (i = 0; i < results.length && i < 10;i++) {
+              results[i].created = getFormattedDate(results[i].created);
+              results[i].last_upd = getFormattedDate(results[i].last_upd);
+              resultObj.push(results[i]);
+            }
+            var count = results.length;
+            //console.log(results);
+            res.render(__dirname + '/html/content/main/enu/index.ejs',{count : i, resultObj : resultObj});
+            console.log('rendering Index');
+          }
+        });
       });
 
       app.get('/embolden',function(req,res){
@@ -285,11 +319,15 @@ module.exports = {
 
       app.post('/add_page_into_db',urlencodedParser, function(req,res){
         console.log(req.body.data);
+        var inputDate = new Date();
+        req.body.data.last_upd = inputDate.toISOString();
+
         var index = db.collection('index');
         try {
           index.find({"route" : req.body.data.route},{_id:1}).toArray(function(err,docs) {
             if (!err){
               if (docs.length == 0) {
+                req.body.data.created = req.body.data.last_upd;
                 index.insertOne(req.body.data, function(err2,insertObj){
                   if (!err2) {
                     res.end('inserted');
@@ -300,7 +338,7 @@ module.exports = {
                 })
               }
               else {
-                index.updateOne({"route" : req.body.data.route},{$set:{"tags":req.body.data.tags,"page":req.body.data.page}}, function(err) {
+                index.updateOne({"route" : req.body.data.route},{$set:{"tags":req.body.data.tags,"page":req.body.data.page,"desc":req.body.data.desc,"last_upd":req.body.data.last_upd,"category":req.body.data.category}}, function(err) {
                   if (!err) {res.send('updated');}
                   else {res.send("Error in updating page")}
                 })

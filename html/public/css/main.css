@@ -136,3 +136,92 @@
 .full {
     width: 100%;
 }
+
+.algo-article {
+  color: #de6231;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 1px grey;
+}
+
+.db-article {
+  color: #70151e;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 1px grey;
+}
+
+.code-article {
+  color: #24a601;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 1px grey;
+}
+
+.infra-article {
+  color: #292929;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 2px 1px grey;
+}
+
+.summary {
+  padding: 24px;
+  background-color: #ffffff;
+  color: #000000;
+  height: 200px;
+}
+
+a.clean{
+  color: #ffffff;
+  opacity: 0.7;
+  border: 2px solid;
+}
+
+a.clean:visited{
+  color: #ffffff;
+  border: 2px solid;
+}
+
+a.clean:hover{
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 1.0;
+}
+
+.recent {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+i {
+  font-size: 60px;
+}
+
+.recent-title {
+  float: right;
+}
+
+.recent-date {
+  font-weight: bold;
+  font-size: 12px;
+  float: left;
+}
+
+.recent-by {
+  float: right;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.recent-heading {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+}

@@ -37,7 +37,71 @@
       <div class="col-md-1">
       </div>
     </div>
+    <br /><br />
+    <div class="row"><div class="col-md-12">
+      <h2>Recent Articles</h2><br /></div></div>
 
+      <div class="row">
+        <div class="col-md-4">
+          <% for (var i = 1; i < 10; i++) { %>
+            <% if (resultObj[i-1].category == "algo") {%>
+
+              <a href="<%=resultObj[i-1].route%>" class="clean"><div class="algo-article">
+                <h2 class="recent"><i class="fas fa-cogs"></i></h2>
+                <h4 class="recent-heading"><%=resultObj[i-1].page %></h4>
+                <div class="summary">
+                  <%=resultObj[i-1].desc %>
+                </div>
+                <div class="recent-date"><%=resultObj[i-1].created %></div>
+                <div class="recent-by"><%=resultObj[i-1].by %></div>
+                </div></a>
+
+                <%}%>
+          <% if (resultObj[i-1].category == "code") {%>
+            <a href="<%=resultObj[i-1].route%>" class="clean"><div class="code-article">
+              <h2 class="recent"><i class="fas fa-code"></i></h2>
+              <h4 class="recent-heading"><%=resultObj[i-1].page %></h4>
+              <div class="summary">
+                <%=resultObj[i-1].desc %>
+              </div>
+              <div class="recent-date"><%=resultObj[i-1].created %></div>
+              <div class="recent-by"><%=resultObj[i-1].by %></div>
+            </div></a>
+
+              <%}%>
+          <% if (resultObj[i-1].category == "infra") {%>
+            <a href="<%=resultObj[i-1].route%>" class="clean"><div class="infra-article">
+              <h2 class="recent"><i class="fas fa-server"></i></h2>
+              <h4 class="recent-heading"><%=resultObj[i-1].page %></h4>
+              <div class="summary">
+                <%=resultObj[i-1].desc %>
+              </div>
+              <div class="recent-date"><%=resultObj[i-1].created %></div>
+              <div class="recent-by"><%=resultObj[i-1].by %></div>
+            </div></a>
+              <%}%>
+          <% if (resultObj[i-1].category == "db") {%>
+            <a href="<%=resultObj[i-1].route%>" class="clean"><div class="db-article">
+              <h2 class="recent"><i class="fas fa-database"></i></h2>
+              <h4 class="recent-heading"><%=resultObj[i-1].page %></h4>
+              <div class="summary">
+                <%=resultObj[i-1].desc %>
+              </div>
+              <div class="recent-date"><%=resultObj[i-1].created %></div>
+              <div class="recent-by"><%=resultObj[i-1].by %></div>
+            </div></a>
+              <%}%>
+
+                <% if (i%3 == 0) {%>
+                </div></div><br /><br /><div class="row"><div class="col-md-4">
+                <%} else {%>
+                </div><div class="col-md-4">
+                <% } %>
+           <% } %>
+
+           </div>
+
+    </div>
     <hr>
 
   </div> <!-- /container -->

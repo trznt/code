@@ -17,16 +17,34 @@ function login() {
 function add_page() {
   if ($('#name').val() == "") {
     alert("Provide a name");
+    return;
   }
   if ($('#tags').val() == "") {
     alert("Provide a tag");
+    return;
   }
   if ($('#route').val() == "") {
     alert("Provide a route");
+    return;
+  }
+  if ($('#desc').val() == "") {
+    alert("Provide a description.");
+    return;
+  }
+  if ($('#by').val() == "") {
+    alert("Please provide an author.");
+    return;
+  }
+  if ($('#category').val() == "") {
+    alert("Please provide a category.");
+    return;
   }
 
   var myObj = new Object();
   myObj.route = $('#route').val();
+  myObj.desc = $('#desc').val();
+  myObj.by = $('#by').val();
+  myObj.category = $('#category').val();
   myObj.page = $('#name').val();
   myObj.tags = $('#tags').val().split(",").map(function(item){
     return item.trim();
@@ -35,7 +53,7 @@ function add_page() {
   $.post('/add_page_into_db',
   {data: myObj},
   function(data,status) {
-    alert("data");
+    alert(data);
   });
 }
 
