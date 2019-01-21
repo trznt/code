@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <% include ../../../partials/code/enu/head.ejs %>
+  <title>Setting Up the C Programming Language</title>
+</head>
+
+<header>
+  <% include ../../../partials/code/enu/main-header.ejs %>
+</header>
+
+<body>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron front_page">
+    <div class="container"><br /><br /><br /><br /><br />
+      <h1 class="display-1">C Programming</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Example row of columns -->
+    <br />
+    <div class="row">
+      <% include ../../../partials/code/enu/sidenav.ejs %>
+      <div class="col">
+        <br />
+        <h2>Computing using C</h2><br /><br />
+
+        <p class="front_page_desc"><br />The computer's number one job in the world is to crunch large data sets of numbers and then convert it into meaningful information. Let's perform a few calculations using the C programming langauge, in other words, <b>computation</b>. The following program calculates the sum of two numbers:<br /><br /></p>
+        <pre class="code-snippet-c">
+         #include &lt;stdio.h&gt;
+         int main()
+         {
+                  int a = 10;
+                  int b = 20;
+                  int c = a + b;
+                  printf("The sum of the two numbers are: %d\n",c);
+                  return 0;
+          }
+       </pre><br />
+        <p class="front_page_desc">
+          Some parts of this program are similar to the previous "Hello World" example we looked at. For eg. the section right before the first <b>{</b> curly bracket. We can also see the use of the <b>printf</b> statement, albeit with some differences.<br />.<br /> In the last tutorial we learnt about functions and how <b>main()</b> is a function. This function is where  the computer starts reading the instructions to execute. Let's look at the instrutions here and what it means.</P>
+        </p> <br />
+        <pre class="code-snippet-c">
+                int a = 10;
+                int b = 20;
+                int c = a + b;
+                printf("The sum of the two numbers are: %d\n",c);
+                return 0;
+        </pre><br />
+          <p class="front_page_desc">Generally in any computer language, each line is referred to as a <b>statement</b>. We will analyze the program one statement at a time.  </p>
+            <p class="code-snippet-c">
+              int a = 10;
+          </p>
+          <p class="front_page_desc"> The first word <b>int</b> is something called a keyword. Keywords have special meaning to the computer language. In the C programming language <b>int</b> has a special meaning and it means: an <b>Integer Datatype</b>. A datatype like the name suggests signifies what type of data we are working with.</p><br />
+          <p class="code-snippet-c">
+            printf("hello world");
+            <p class="front_page_desc"> This line is the first instruction of our program. <b>printf("hello world")</b> is the name of a function - we know its a function because it has <b>()</b> in the name. This is a built-in standard function that is provided along with the compiler as part of the library <b>stdio.h</b>. This function prints whatever word we type between the <b>()</b> on the screen. Do note that the quotes should be used to specify the word or sentence - or you will get an error when building the project.
+          </p><br />
+          <p class="code-snippet-c">
+            int a = 10;
+          </p>
+          <p class="front_page_desc"> The symbol '}' signifies the end of the main function. The instructions that are present within the {} is called the function definition. </p><br />
+
+          <p class="front_page_desc">
+            In essence, we basically performed function <b>printf</b> from within the <b>main</b> function. But notice how the printf function has no associated {} brackets to specify any group of instructions. This is because the prtinf is a built-in function and it's instructions are already located in stdio.h. We don't need to re-write those instructions. If you are writing a brand new function, then you will have to list down each instruction for the task within the {} brackets.
+          </p>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+</main>
+
+  <% include ../../../partials/code/enu/tail.ejs %>
+  <% include ../../../partials/code/enu/main-footer.ejs %>
