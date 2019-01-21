@@ -31,41 +31,58 @@
         <p class="front_page_desc"><br />The computer's number one job in the world is to crunch large data sets of numbers and then convert it into meaningful information. Let's perform a few calculations using the C programming langauge, in other words, <b>computation</b>. The following program calculates the sum of two numbers:<br /><br /></p>
         <pre class="code-snippet-c">
          #include &lt;stdio.h&gt;
-         int main()
+         void main()
          {
                   int a = 10;
                   int b = 20;
                   int c = a + b;
                   printf("The sum of the two numbers are: %d\n",c);
-                  return 0;
           }
        </pre><br />
+       <p class="front_page_desc">
+         The program is run in the same way that you ran the previous "Hello World" program. When you run it, you get the following output:
+       </p> <br />
+       <p class="code-snippet">
+               The sum of the two numbers are: 30
+       </p><br /><br />
         <p class="front_page_desc">
-          Some parts of this program are similar to the previous "Hello World" example we looked at. For eg. the section right before the first <b>{</b> curly bracket. We can also see the use of the <b>printf</b> statement, albeit with some differences.<br />.<br /> In the last tutorial we learnt about functions and how <b>main()</b> is a function. This function is where  the computer starts reading the instructions to execute. Let's look at the instrutions here and what it means.</P>
+          Some parts of this program are similar to the previous "Hello World" example we looked at. For eg. the section right before the first <b>{</b> curly bracket. We can also see the use of the <b>printf</b> statement, albeit with some differences.<br /><br /> In the last tutorial we learnt about functions and how <b>main()</b> is a function. This function is where  the computer starts reading the instructions to execute. Let's look at the instructions in the <b>main</b> section of the program.</P>
         </p> <br />
         <pre class="code-snippet-c">
-                int a = 10;
-                int b = 20;
-                int c = a + b;
-                printf("The sum of the two numbers are: %d\n",c);
-                return 0;
-        </pre><br />
-          <p class="front_page_desc">Generally in any computer language, each line is referred to as a <b>statement</b>. We will analyze the program one statement at a time.  </p>
+
+                  int a = 10;
+                  int b = 20;
+                  int c = a + b;
+                  printf("The sum of the two numbers are: %d\n",c);
+
+       </pre><br />
+          <p class="front_page_desc">Generally in any computer language, each line of a computer program is referred to as a <b>statement</b>. Let's analyze the program one statement at a time.  </p>
             <p class="code-snippet-c">
               int a = 10;
-          </p>
-          <p class="front_page_desc"> The first word <b>int</b> is something called a keyword. Keywords have special meaning to the computer language. In the C programming language <b>int</b> has a special meaning and it means: an <b>Integer Datatype</b>. A datatype like the name suggests signifies what type of data we are working with.</p><br />
-          <p class="code-snippet-c">
-            printf("hello world");
-            <p class="front_page_desc"> This line is the first instruction of our program. <b>printf("hello world")</b> is the name of a function - we know its a function because it has <b>()</b> in the name. This is a built-in standard function that is provided along with the compiler as part of the library <b>stdio.h</b>. This function prints whatever word we type between the <b>()</b> on the screen. Do note that the quotes should be used to specify the word or sentence - or you will get an error when building the project.
           </p><br />
+          <p class="front_page_desc"> The first word <b>int</b> is something called a keyword. Keywords have special meaning to the C computer language. In the C programming language <b>int</b>  means: an <b>Integer Datatype</b>. A datatype like the name suggests signifies what type of data an item is. Here the item being referred to is <b>a</b>. There is also an <b>=</b> sign as well as a number <b>10</b>.<br /><br />
+          So you may already have an idea of what we are trying to tell here with this statement: basically we are creating a new item <b>a</b>: or in computer language terms we are creating a <b>variable</b> called <b>a</b> and assigning it a value of <b>10</b>. But also note that we are also setting the dataype as <b>int</b> which means integer. In other words, in the first line we are creating an <b><u>integer variable</u> named <u>a</u> and giving it a value of <u>10</u> using the <u>equal to(=)</u> sign</b>.<br /><br />
+          The new term being introduced here, a <b>variable</b> is just placeholders that we create to store information in to for processing. The reason why it's called a variable is because it's value can be changed during the course of execution of a computer program.</p><br />
           <p class="code-snippet-c">
-            int a = 10;
+             int b = 20;
           </p>
-          <p class="front_page_desc"> The symbol '}' signifies the end of the main function. The instructions that are present within the {} is called the function definition. </p><br />
+          <p class="front_page_desc"> You can probably tell what the second line means now. The above line simply states that we are creating another <b>variable</b> named <b>b</b> and assigning it a value of <b>20</b>.</p>
+          <br />
+          <p class="code-snippet-c">
+            int c = a + b;
+          </p>
+          <p class="front_page_desc"> The third statement also seems to be creating a new integer varaiable named <b>c</b> but it's not assigned any number. Insteam it's assigned <b>a + b</b>. When the computer program runs, what it will do here, is take the values that is stored in variables <b>a</b> and <b>b</b> and then assign the <b>sum (+)</b> of these two variables to <b>c</b>. Can you guess what number is stored in variable <b>c</b>?</p><br />
 
           <p class="front_page_desc">
-            In essence, we basically performed function <b>printf</b> from within the <b>main</b> function. But notice how the printf function has no associated {} brackets to specify any group of instructions. This is because the prtinf is a built-in function and it's instructions are already located in stdio.h. We don't need to re-write those instructions. If you are writing a brand new function, then you will have to list down each instruction for the task within the {} brackets.
+            The value stored in variable <c>c</c> is 30! We just performed a computation operation making use of a computer.
+          </p><br />
+          <p class="code-snippet-c">
+          printf("The sum of the two numbers are: %d\n",c);
+        </p> <br />
+          <p class="front_page_desc">
+          In last line of the program, we are printing some text on the screen. It is a printf statement like the one we saw in the hello world example. However we see the presence of a <b>'%d'</b> and a <b>',c'</b>. <br /><br />
+          The <b>%d</b> is used to specify the exact place where we would like to display the value of the variable within the output. But how does the printf statement know which variable to display ?<br /><br />
+          To do that we need also reference the variable name in the function. A comma is generally used to demarcate multiple parameters to a function, hence we put a comma and then the variable name <b>c</b>. The value of the variable gets placed in the position of <b>%d</b>.<br />
           </p>
       </div>
       <div class="col-md-2">

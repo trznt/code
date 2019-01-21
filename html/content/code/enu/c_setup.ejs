@@ -27,7 +27,7 @@
       <div class="col">
         <br />
         <h2>Setting Up C on your computer<br /><br />
-        <p class="front_page_desc"><br />Before we can start writing C programs to make the computer do amazing things, we need to install the C programming language compiler. A compiler is software that lets you convert the high level language that you write into machine code. If you are using linux or Mac OS then you should already be set. If you are on windows you will need to install a C compiler. Click on the operating system you use, to set up your C compiler.<br /><br /></p>
+        <p class="front_page_desc"><br />Before we can start writing C programs to make the computer do amazing things, we need to install the C programming language <b>compiler</b>. A compiler is software that lets you convert the high level language that you write into machine code. If you are using linux or Mac OS then you should already be set. If you are on windows you will need to install a C compiler. Click on the operating system you use, to set up your C compiler.<br /><br /></p>
         <h4 id="low">Choose your OS:</h4>
         <ul class="list">
           <li>
@@ -92,9 +92,10 @@
          #include &lt;stdio.h&gt;
          void main()
          {
-           printf("hello world");
+           printf("hello world\n");
          }
-       </pre>
+       </pre><br />
+       <p class="front_page_desc">Notice how there is a <b>\n</b> right after <b>hello world</b>. It was not put in by mistake. The <b>\n</b> has special meaning here. We will discuss more about this in the next tutorial.</p>
        <p class="front_page_desc">Now go to the directory where the file is present and then type: </p>
        <p class="code-snippet">
          gcc myfirstapp.c -o myfirstapp.o

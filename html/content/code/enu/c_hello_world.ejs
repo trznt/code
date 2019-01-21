@@ -31,7 +31,7 @@
          #include &lt;stdio.h&gt;
          void main()
          {
-           printf("hello world");
+           printf("hello world\n");
          }
        </pre>
         <p class="front_page_desc"><br />You might be wondering what each of words and lines in the program mean. Let's take apart the program that we executed in the last example and look at it line by line.<br /><br /></p>
@@ -51,9 +51,10 @@
           </p>
           <p class="front_page_desc"> As mentioned previously a function is a way to group together a set of instructions that perform a task. The grouping is placed in a pair of braces <b>{ }</b>. The symbol '{' signifies the start of the function.</p><br />
           <p class="code-snippet-c">
-            printf("hello world");
-            <p class="front_page_desc"> This line is the first instruction of our program. <b>printf("hello world")</b> is the name of a function - we know its a function because it has <b>()</b> in the name. This is a built-in standard function that is provided along with the compiler as part of the library <b>stdio.h</b>. This function prints whatever word we type between the <b>()</b> on the screen. Do note that the quotes should be used to specify the word or sentence - or you will get an error when building the project.
-          </p><br />
+            printf("hello world\n");
+            <p class="front_page_desc"> This line is the first instruction of our program. <b>printf("hello world\n")</b> is the name of a function - we know its a function because it has <b>()</b> in the name. This function prints whatever word we type between the <b>()</b> on the screen. Do note that the quotes should be used to specify the word or sentence - or you will get an error when we run the program.<br />
+            </p><br />
+
           <p class="code-snippet-c">
           }
           </p>
@@ -61,7 +62,57 @@
 
           <p class="front_page_desc">
             In essence, we basically performed function <b>printf</b> from within the <b>main</b> function. But notice how the printf function has no associated {} brackets to specify any group of instructions. This is because the prtinf is a built-in function and it's instructions are already located in stdio.h. We don't need to re-write those instructions. If you are writing a brand new function, then you will have to list down each instruction for the task within the {} brackets.
-          </p>
+          </p><br />
+          <p class="front_page_desc">
+          <b><u>What happened to the /n?</u></b> When the program runs we get an output of <b>hello world</b> But what happened to the <b>\n</b>. It's gone, it's almost like it disappered or <b>escaped</b> from the output. <br /><br />
+            In programming languages any <b>\</b> is a way to signify something called an <b>escape character</b> or an <b>escape sequence</b> . Escape characters perform special actions when the output is generated on screen. In this case <b>\n</b> signals a <b>line break</b> or a  <b>line feed</b> which makes the cursor move to the next line. Try placing the <b>\n</b> between the <b>hello</b> and <b>world</b> as shown below and see what the output looks like when you run the program.
+          </p><br />
+          <p class="code-snippet-c">
+          printf("hello\nworld");
+        </p><br /><br />
+        <p class="front_page_desc">When you run the program you will see that the word <b>hello</b> is on one line and <b>world</b> is on the next line.</p></br>
+        <p class="code-snippet">
+          hello<br />world
+        </p><br /><br />
+          <p class="front_page_desc">
+         The <b>\n</b> has performed a line break operation. Hence this escape character help's us to format output on the screen. There are several types of escape characters. Some of them are listed below. You can try them out and see what happens.
+        </p>
+        <br /><br />
+        <h4>Escape Characters</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Escape Character</th>
+              <th scope="col">Operation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>\n</td>
+              <td>Performs a line feed operation</td>
+            </tr>
+            <tr>
+              <td>\t</td>
+              <td>Performs a horizontal tab operation</td>
+            </tr>
+            <tr>
+              <td>\b</td>
+              <td>Performs a backspace operation on the screen</td>
+            </tr>
+            <tr>
+              <td>\v</td>
+              <td>Performs a vertical tab operation</td>
+            </tr>
+            <tr>
+              <td>\\</td>
+              <td>To print a single \ on the screen</td>
+            </tr>
+            <tr>
+              <td>\"</td>
+              <td>To print a single " on the screen.</td>
+            </tr>
+          </tbody>
+        </table><hr /><br /><br />
       </div>
       <div class="col-md-2">
       </div>
