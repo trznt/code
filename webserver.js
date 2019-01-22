@@ -1,4 +1,8 @@
-
+function logger(req) {
+  var d = new Date();
+  var ip = req.headers['x-real-ip'] || req.connection.remoteAddress
+  console.log("[" + d.toISOString() + "] - [" + ip + "] : " + req.route.path);
+}
 function search_trim(val) {
   var words_to_strip = ['what','the','how','is','are','which','why','of','to','my'];
   val = val.toLowerCase();
@@ -67,124 +71,124 @@ module.exports = {
             var count = results.length;
             //console.log(results);
             res.render(__dirname + '/html/content/main/enu/index.ejs',{count : i, resultObj : resultObj});
-            console.log('rendering Index');
+            logger(req);
           }
         });
       });
 
       app.get('/embolden',function(req,res){
         res.render(__dirname + '/html/content/main/enu/embolden.ejs')
-        console.log('rendering embolden');
+        logger(req);
       });
 
       app.get('/privacy',function(req,res){
         res.render(__dirname + '/html/content/main/enu/privacy.ejs')
-        console.log('rendering privacy');
+        logger(req);
       });
 
       app.get('/terms',function(req,res){
         res.render(__dirname + '/html/content/main/enu/terms.ejs')
-        console.log('rendering privacy');
+        logger(req);
       });
 
       app.get('/about',function(req,res){
         res.render(__dirname + '/html/content/main/enu/about.ejs')
-        console.log('rendering about');
+        logger(req);
       });
 
       app.get('/contact',function(req,res){
         res.render(__dirname + '/html/content/main/enu/contact.ejs')
-        console.log('rendering contact');
+        logger(req);
       });
 
       app.get('/algo',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/index.ejs')
-        console.log('rendering Algo-Index');
+        logger(req);
       });
 
       app.get('/code',function(req,res){
         res.render(__dirname + '/html/content/code/enu/index.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/infra',function(req,res){
         res.render(__dirname + '/html/content/infra/enu/index.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/infra/set_up_aws',function(req,res){
         res.render(__dirname + '/html/content/infra/enu/set_up_aws.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/infra/set_up_aws_win',function(req,res){
         res.render(__dirname + '/html/content/infra/enu/set_up_aws.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/infra/virtualization',function(req,res){
         res.render(__dirname + '/html/content/infra/enu/virtualization.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/infra/containerization',function(req,res){
         res.render(__dirname + '/html/content/infra/enu/containerization.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/infra/containerization/docker_install',function(req,res){
         res.render(__dirname + '/html/content/infra/enu/docker_install.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/db',function(req,res){
         res.render(__dirname + '/html/content/db/enu/index.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/db/mysql',function(req,res){
         res.render(__dirname + '/html/content/db/enu/mysql.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/code/c',function(req,res){
         res.render(__dirname + '/html/content/code/enu/c_setup.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/code/c/hello_world',function(req,res){
         res.render(__dirname + '/html/content/code/enu/c_hello_world.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/code/c/computation',function(req,res){
         res.render(__dirname + '/html/content/code/enu/c_addition.ejs')
-        console.log('rendering Code-Index');
+        logger(req);
       });
 
       app.get('/algo/sorting',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/sorting.ejs')
-        console.log('rendering Algo-Index');
+        logger(req);
       });
 
       app.get('/algo/bubblesort',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/bubblesort.ejs')
-        console.log('rendering Algo-bubblesort');
+        logger(req);
       });
 
       app.get('/algo/insertionsort',function(req,res){
         res.render(__dirname + '/html/content/algo/enu/insertionsort.ejs')
-        console.log('rendering Algo-insertionsort');
+        logger(req);
       });
 
       app.get('/g8w31',function(req,res){
         res.render(__dirname + '/html/content/admin/enu/login.ejs')
-        console.log('rendering Login');
+        logger(req);
       });
 
       app.get('/createuser',function(req,res){
         res.sendFile('/home/kumarsp2/trznt/gate0000/createuser.html')
-        console.log('rendering CreateUser');
+        logger(req);
       });
 
       app.get('/home',function(req,res){
@@ -194,6 +198,7 @@ module.exports = {
         }
         else
           res.redirect("/");
+        logger(req);
       });
 
       app.get('/add_page',function(req,res){
@@ -203,6 +208,7 @@ module.exports = {
         }
         else
           res.redirect("/");
+        logger(req);
       });
 
       app.get('/edit_page',function(req,res){
@@ -212,26 +218,31 @@ module.exports = {
         }
         else
           res.redirect("/");
+        logger(req);
       });
 
       app.post('/getSalt',urlencodedParser, function(req,res){
         console.log(rand(160,36));
         res.end(rand(160,36));
         console.log('getsalt');
+        logger(req);
       });
 
       app.post('/search',urlencodedParser, function(req,res){
         console.log("searching for " + req.body.search);
         console.log("searching for only: " + search_trim(req.body.search));
-        var keywords = search_trim(req.body.search).split(' ');
+        var keywords = search_trim(req.body.search.toLowerCase()).split(' ');
         db.collection("index").find({tags: { $in : keywords}}).toArray(function(err,results){
           if (err) throw err;
-          if (results.length == 0)
-            res.render(__dirname + '/html/content/main/enu/search_0.ejs')
+          if (results.length == 0) {
+            res.render(__dirname + '/html/content/main/enu/search_0.ejs');
+            logger(req);
+          }
           else {
             var count = results.length;
             console.log(results);
             res.render(__dirname + '/html/content/main/enu/search.ejs',{count : count, results : results});
+            logger(req);
           }
         });
 
@@ -269,6 +280,7 @@ module.exports = {
           resultSet.infra = sortJSON(resultSet.infra);
           console.log(results);
           res.render(__dirname + '/html/content/main/enu/sitemap.ejs',{resultSet : resultSet});
+          logger(req);
         });
       });
 
@@ -279,10 +291,10 @@ module.exports = {
               if (err) throw err;
                 res.render(__dirname + '/html/content/admin/enu/edit_index_detail.ejs',result[0]);
             });
-            console.log("Accessed getIndex");
         }
         else
           res.redirect("/");
+        logger(req);
       });
 
       app.get('/api/getIndex', function (req,res){
@@ -291,10 +303,10 @@ module.exports = {
               if (err) throw err;
                 res.send(result);
             });
-            console.log("Accessed getIndex");
         }
         else
           res.redirect("/");
+        logger(req);
       });
 
       app.post('/getSaltForLogin',urlencodedParser, function(req,res){
@@ -303,6 +315,7 @@ module.exports = {
         console.log('salt for loing is ' + req.session_state.loginsalt);
         res.end(salt);
         console.log('getSaltForLogin');
+        logger(req);
       });
 
       app.post('/getSaltForUser',urlencodedParser, function(req,res){
@@ -319,7 +332,7 @@ module.exports = {
           });
         }
         catch (e) {res.end(e)};
-        console.log('getsalt');
+        logger(req);
       });
 
       app.post('/add_page_into_db',urlencodedParser, function(req,res){
@@ -353,6 +366,7 @@ module.exports = {
           });
         }
         catch (e) {res.end(e)};
+        logger(req);
       });
 
       app.post('/checkUserHash',urlencodedParser, function(req,res){
@@ -378,7 +392,7 @@ module.exports = {
           });
         }
         catch (e) {res.end(e)};
-        console.log('checkUserHash');
+        logger(req);
       });
   },
 

@@ -46,7 +46,7 @@ function add_page() {
   myObj.by = $('#by').val();
   myObj.category = $('#category').val();
   myObj.page = $('#name').val();
-  myObj.tags = $('#tags').val().split(",").map(function(item){
+  myObj.tags = $('#tags').val().toLowerCase().split(",").map(function(item){
     return item.trim();
   });
 
